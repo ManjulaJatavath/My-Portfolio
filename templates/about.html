@@ -2,7 +2,7 @@
 {% extends "basic.html" %} 
 
 {% block title %} About {% endblock title %} 
-
+{% load static %}
 {% block stylecss %}
 <link
   rel="stylesheet"
@@ -13,132 +13,48 @@
 />
 {% endblock stylecss %} 
 
-
 {% block body %}
 <section id="about" class="about">
   <div class="container">
+
     <div class="section-title">
-      <h2>Manjula Jatavath - Python Developer</h2>
-      <hr class="title-line">
-      <div class="summary">
-        <h3>Summary :</h3> 
-        <p>Enthusiastic and dedicated Python Developer with a solid foundation in Python, Django, HTML5, CSS3, and MySQL. Eager to kickstart a career in software development, leveraging a passion for coding to contribute effectively to innovative projects. Committed to ongoing growth, embracing new challenges, and staying abreast of industry advancements through continuous learning.</p>
-      </div>
-      <hr class="section-line">
-      <p><strong>Email :</strong> manjulajatavath554@gmail.com | <strong>Phone :</strong> 6302389676</p>
-      <p><strong>Location :</strong> Telangana, India | <strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/manjula-jatavath-9b3113284/" target="_blank">manjula-jatavath</a> | <strong>GitHub :</strong> <a href="https://github.com/ManjulaJatavath" target="_blank">ManjulaJatavath</a></p>
+      <h2>About</h2>
+      <p class="light-blue-text"></p>
+      <p>Enthusiastic and dedicated Python Developer with a solid foundation in Python, Django, HTML5, CSS3, and MySQL. Eager to kickstart a career in software development, leveraging a passion for coding to contribute effectively to innovative projects. Committed to ongoing growth, embracing new challenges, and staying abreast of industry advancements through continuous learning.</p>
     </div>
-    <div class="section-content">
-      <h3>Education :</h3>
-      <ul>
-        <li><strong>BSc</strong></li>
-        <li>Government Degree College for Women (Autonomous)</li>
-        <li>08/2018 - 06/2022, Nalgonda</li>
-      </ul>
-      <ul>
-        <li><strong>Class XII (BZC)</strong></li>
-        <li>GOVT Jr. College Girls</li>
-        <li>06/2016 - 03/2018, Devarakonda</li>
-      </ul>
-        <ul>
-          <li><strong>Class X </strong></li>
-          <li>Z.P.P High School</li>
-          <li>06/2015 - 03/2016, Devarakonda</li>
-        </ul>
 
-      
-      <h3>Personal Projects :</h3>
-      <ul>
-        <li><strong>Health Provider Finder</strong></li>
-        <li>A Python app that works with the Steer Health API to find heart health specialists. <a href="https://github.com/ManjulaJatavath/Health_Provider_Search" target="_blank">ManjulaJatavath/Health_Provider_Search</a></li>
-        <li><strong>Office Employee Management System</strong></li>
-        <li>An employee management system built using Python and Django. <a href="https://github.com/ManjulaJatavath/Office-Employee-Management-System" target="_blank">ManjulaJatavath/Office-Employee-Management-System</a></li>
-        <li><strong>Restaurant Website</strong></li>
-        <li>A simple restaurant website using HTML and CSS. <a href="https://github.com/ManjulaJatavath/Restaurant-Website" target="_blank">ManjulaJatavath/Restaurant-Website</a></li>
-      </ul>
-
-      <h3>Work Experience :</h3>
-      <ul>
-        <li><strong>Backend(Python) Internship</strong></li>
-        <li>BAOIAM Innovation Pvt Ltd</li>
-        <li>12/2023 - Present, Noida, Uttar Pradesh (Remote)</li>
-      </ul>
-
-      <h3>Skills :</h3>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="skill-column">
-            <ul>
-              <li> Python</li>
-              <li>Django</li>
-              <li>MySQL</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Pandas</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="skill-column">
-            <ul>
-              <li>NumPy</li>
-              <li>MS-OFFICE</li>
-              <li>Git</li>
-              <li>Beautiful Soup (Web Scraping)</li>
-              <!-- Add more skills if needed -->
-            </ul>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+        <img src="{% static 'assets/img/profile-img1.jpg' %}" alt="" class="img-fluid rounded-circle">
       </div>
-      <h3>Soft Skills :</h3>
-      <ul>
-        <li> Communication</li>
-        <li>Teamwork</li>
-        <li>Problem-solving</li>
-        <li>Adaptability</li>
-        <!-- Add more soft skills if needed -->
-      </ul>
-      <h3>Achievements :</h3>
-      <ul>
-        <li><a href="https://www.hackerrank.com/profile/jatavathmanjula3" target="_blank">HACKERRANK 4th Star in problem solving - jatavathmanjula3</a></li>
-      </ul>
-
-      <h3>Certificate :</h3>
-      <ul>
-        <li><a href="https://www.sololearn.com/en/certificates/CC-VN03VA8S" target="_blank">Python Developer (09/2023)</a></li>
-        <li><a href="https://olympus.mygreatlearning.com/courses/21462/certificate" target="_blank">MySQL Database (09/2023)</a></li>
-        <li><a href="https://moonshot.scaler.com/s/sl/cEyWanGbMZ?_gl=1*6v1n7*_ga*MTk2NDEwNTY2MC4xNjkwNjA4ODky*_ga_53S71ZZG1X*MTY5MDcwNDQ4Mi4zLjEuMTY5MDcxMDEyNi4wLjAuMAlink_to_python_certificate" target="_blank">HTML (06/2023 - 07/2023)</a></li>
-      </ul>
-
-      <h3>Languages :</h3>
-      <ul>
-        <li>Telugu - Full Professional Proficiency</li>
-        <li>English - Professional Working Proficiency</li>
-        <li>Hindi - Professional Working Proficiency</li>
-        <!-- Add more languages if needed -->
-      </ul>
-
-      <h3>Interests :</h3>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="interest-column">
+      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+        <h3>Python Developer &amp; Backend Developer.</h3>
+        <p class="fst-italic">
+          As a fresher Python Developer, I am passionate about coding and eager to learn. I am proficient in Python programming language and have a basic understanding of backend development concepts. I am enthusiastic about contributing to meaningful projects and gaining real-world experience.
+        </p>
+        <div class="row">
+          <div class="col-lg-6">
             <ul>
-              <li>Cooking</li>
-              <li>Reading</li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 Aug 2001</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>6302389676</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Hyderabad, Telangana</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSC</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>manjulajatavath554@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
             </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="interest-column">
-            <ul>
-              <li>Music</li>
-              <li>Dancing</li>
-            </ul>
-          </div>
-        </div>
+        <p>
+          Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+        </p>
       </div>
     </div>
+
   </div>
 </section>
-
 {% endblock body %}

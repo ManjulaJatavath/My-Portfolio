@@ -10,4 +10,12 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
-    
+class Blogs(models.Model):
+    title=models.CharField(max_length=60)
+    description=models.TextField()
+    authname=models.CharField(max_length=25)
+    img=models.ImageField(upload_to='blogs',blank=True, null=True)
+    timeStamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title   
