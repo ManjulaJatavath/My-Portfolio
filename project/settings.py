@@ -137,5 +137,5 @@ MESSAGE_TAGS={
     messages.ERROR:'danger'
 }
 # settings.py
-APPEND_SLASH = False
+APPEND_SLASH = True
 

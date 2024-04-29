@@ -21,10 +21,16 @@ Home Page - Manjula Portfolio
     .left{
       margin-right: 10px;
     }
+    .navbar a {
+      margin-top: 10px; /* Adjust this value as needed */
+    }
+  
    .skill {
       margin-bottom: 40px;
     }
-
+    #projects {
+      margin-top: 40px;
+    }
     .skill h3 {
       margin-bottom: 5px;
     }
@@ -48,8 +54,8 @@ Home Page - Manjula Portfolio
       margin-bottom: 5px;
     }
 
-    .projects {
-      margin-top: 40px;
+    .projects-section .projects{
+      margin: 0px;
     }
 
     .projects h2 {
@@ -87,7 +93,7 @@ Home Page - Manjula Portfolio
       background-color: white; 
       margin: 80px;
       color: #040404;
-      margin: 60px 0;
+      margin: 40px 0;
       display: center;
       
     }
@@ -166,7 +172,7 @@ Home Page - Manjula Portfolio
 }
 .education {
   position: relative;
-  padding: 45px 0 15px 0;
+  padding: 40px 0 15px 0;
   height: 40vw;
 }
 .h2-tag{
@@ -363,7 +369,7 @@ border-color: transparent #dddddd transparent transparent;
   height: 40vh;
 }
 .skills {
-  margin-bottom: 0; /* Adjust this value as needed */
+  margin-bottom: 0; 
 }
 .single-skill-content{padding-top: 90px;}
 .section-heading h2 {
@@ -389,7 +395,7 @@ border-color: transparent #dddddd transparent transparent;
   bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px; /* Adjust this width as needed */
+  width: 80px; 
   height: 2px;
   background-color: #1594c7; 
 }
@@ -539,31 +545,105 @@ border-color: transparent #dddddd transparent transparent;
 /*-------------------------------------
         4.  Projects
 --------------------------------------*/
-.projects-item h1 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c; /* Adjust this color as needed */
+#projects {
+  padding: 40px 0;
+  margin:0 0 20px;
+}
+
+#projects .sub-title {
   text-align: center;
-  margin-bottom: 30px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 30px 10px;
+
+}
+
+.col1 {
+  flex-basis: 55%;
+}
+
+.col1 .title h4 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title a {
+  color: #7f00ff;
+  background: white;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.col1 p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.col2 {
+  flex-basis: 40%;
   position: relative;
+  overflow: hidden;
+  transform: height 0.5s;
+  margin: 10px 20px 0;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.col1{
+  margin-bottom: 0;
+}
+.col2 .image1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 
-.projects-item h1::after {
-  content: '';
+.layer {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(rgba(0,0,0,0.6), #b4854d);
+  border-radius: 20px;
   position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px; /* Adjust this width as needed */
-  height: 2px;
-  background-color: #1594c7; 
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
 }
-.projects-section{
-  height: 50vh;
-}
-  </style>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color:white;text-align:center; color:white; font-size:large margin-bottom: 20px;">
+.layer a {
+  color: #b4854d;
+  background: white;
+  font-size: 15px;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.col2:hover .layer {
+  height: 100%;
+}
+
+</style>
+
+  <nav style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color:white;text-align:center; color:white; font-size:large; margin: top 50px;">
     <div class="left" style="font-size: 1.5rem; color: #d27e1e;">Manjula's Portfolio</div>
     <div class="right">
         <ul style="padding: 0; display: flex; margin-top:0px">
@@ -591,6 +671,12 @@ border-color: transparent #dddddd transparent transparent;
       <img src="static\assets\img\img2.jpeg" alt="" class="round-img">
     </div>
   </section>
+  {% for message in messages %}    
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
   <hr style="border-color: #d27e1e; border-radius: 10px; height: 1px;">
 
 <!-- Education Section -->
@@ -764,58 +850,89 @@ border-color: transparent #dddddd transparent transparent;
 
 <!-- Projects Section -->
 <section id="projects" class="projects-section">
-  <div class="container">
-    <div class="row">
-      <div class="projects-item">
-        <h1>PROJECTS</h1>
+  <h2 class="sub-title" style="color: hwb(215 7% 67%); position: relative;">PROJECTS
+      <span style="position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 100px; height: 2px; background-color: #1594c7;"></span>
+  </h2>
+  <hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+<div class="project-list" style="padding: 0px;">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: rgb(255, 157, 0);">1. SKIN-SAVIOUR</h4>
+          <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="project1.jpg" alt="Project 1">
-          <div class="overlay">
-            <h4>Project 1</h4>
-            <p>Description of Project 1</p>
-            <a href="project1.html">View Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="project2.jpg" alt="Project 2">
-          <div class="overlay">
-            <h4>Project 2</h4>
-            <p>Description of Project 2</p>
-            <a href="project2.html">View Details</a>
-          </div>
-        </div>
-      </div>
-      <!-- Add more project items as needed -->
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="project3.jpg" alt="Project 3">
-          <div class="overlay">
-            <h4>Project 3</h4>
-            <p>Description of Project 3</p>
-            <a href="project3.html">View Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
+      <p>It is a website which offers an innovative platform where users embark on a discovery of their skin's unique needs through an engaging quiz experience.</p>
   </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/Skin-Saviour.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
+</div>
+<hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+<div class="project-list" style="padding: 0px;">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: rgb(255, 157, 0);"> 2. EMPLOYEE MANAGEMENT SYSTEM</h4>
+          <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p>Designed and implemented core functionalities allowing users to manage employee records, including adding, removing, and filtering employees before authentication.</p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/emp-management.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
+</div>
+</div>
+<hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+<div class="project-list">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: rgb(255, 157, 0);">3. MR RESTAURANT WEBSITE</h4>
+          <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p>1. Designed to showcase MR Restaurant's offerings and facilitate customer engagement through a user-friendly interface.</p>
+      <p>2. A dynamic website featuring sections for navigation, specials, testimonials, menu, contact, and social media integration.</p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/Restaurant_website.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
+</div>
+</div>
+<hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+<div class="project-list">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: rgb(255, 157, 0);">4. PORTFOLIO WEBSITE</h4>
+          <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p>1. I developed a portfolio using Django, showcasing my educations, skills, experiences, and projects.</p>
+      <p>2. With Django, I crafted a dynamic and visually appealing portfolio, presenting my professional journey and achievements effectively.</p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/portfolio.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
+</div>
+</div>
 </section>
+
 
   <!-- End Main Section -->
 </main>
 
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    {% for message in messages %}    
-    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-      <strong>{{message}}</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    {% endfor %}
 {% endblock body %}
 
 {% block scripts %}
