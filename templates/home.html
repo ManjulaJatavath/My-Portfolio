@@ -1,7 +1,7 @@
 {% extends 'basic.html' %}
 {% load static %}
 {% block title %}
-Home Page - Manjula Portfolio
+Manjula Portfolio
 {% endblock title %}
 
 {% block stylecss %}
@@ -14,77 +14,36 @@ Home Page - Manjula Portfolio
 <!-- Navigation Bar -->
 <main>
 <header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+    
+    @media (max-width: 869.98px) {
 
+    }
+  
+    @media (min-width: 868px) and (max-width: 991.98px) {
+    }
+    
+    @media (min-width: 992px) {
+        
+    }
+    @media (max-width: 767.98px) {
+      .firstSection {
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .firstSection .leftSection,
+      .firstSection .rightSection {
+          width: 100%;
+          margin: 20px 0;
+      }
+  }
     .left{
       margin-right: 10px;
     }
-    .navbar a {
-      margin-top: 10px; /* Adjust this value as needed */
-    }
-  
-   .skill {
-      margin-bottom: 40px;
-    }
-    #projects {
-      margin-top: 40px;
-    }
-    .skill h3 {
-      margin-bottom: 5px;
-    }
 
-    .skill p {
-      margin-bottom: 10px;
-    }
-
-    .education,
-    .experience {
-      margin-bottom: 40px;
-    }
-
-    .education h3,
-    .experience h3 {
-      margin-bottom: 10px;
-    }
-
-    .education p,
-    .experience p {
-      margin-bottom: 5px;
-    }
-
-    .projects-section .projects{
-      margin: 0px;
-    }
-
-    .projects h2 {
-      margin-bottom: 20px;
-    }
-
-    .project {
-      margin-bottom: 30px;
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      margin-bottom: 5px;
-    }
-
-    .project-link {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .project-link:hover {
-      text-decoration: underline;
-    }
-
-    .experience {
-      margin-top: 40px;
-    }
     .firstSection {
       display: flex;
       justify-content: space-around; 
@@ -92,7 +51,7 @@ Home Page - Manjula Portfolio
       background-color: white; 
       margin: 80px;
       color: #040404;
-      margin: 40px 0;
+      margin: 70px 0;
       display: center;
       
     }
@@ -106,7 +65,7 @@ Home Page - Manjula Portfolio
     margin: 30px 0 ;  
   }
   .rightSection{
-    width: 50%;
+    width: 100%;
   }
   .rightSection img {
     background-color: hsl(32, 100%, 50%);
@@ -156,6 +115,7 @@ Home Page - Manjula Portfolio
     margin: auto;
 
   }
+
 /*-------------------------------------
         1.  Education
 --------------------------------------*/
@@ -173,6 +133,7 @@ Home Page - Manjula Portfolio
   position: relative;
   padding: 40px 0 15px 0;
   height: 40vw;
+
 }
 .h2-tag{
 color: #007bff;
@@ -358,9 +319,6 @@ border-color: transparent #dddddd transparent transparent;
 /*-------------------------------------
         2.  Skills
 --------------------------------------*/
-#main{
-  padding-top: 30px;
-}
 .skill-content{
   padding-bottom: 30px;
 }
@@ -461,17 +419,24 @@ border-color: transparent #dddddd transparent transparent;
 /*-------------------------------------
         3.  Internship Experience
 --------------------------------------*/
+#experience {
+  padding: 10px 0;
+  margin:0 0 10px;
+
+}
 .internship-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vw;
+  height: 90vw;
+
 }
 .internship-section {
   display: center;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically center the content */
-  height: 70vh; /* Set a height to center vertically on the page */
+  justify-content: center; 
+  align-items: center; 
+  height: 80vh; 
+  width:100%
 }
 .internship-section .education-item h2 {
   /* Apply styles for the section title */
@@ -483,7 +448,6 @@ border-color: transparent #dddddd transparent transparent;
   position: relative;
 }
 
-/* Apply timeline styles */
 .internship-section .timeline {
   position: relative;
   width: 100%;
@@ -537,16 +501,17 @@ border-color: transparent #dddddd transparent transparent;
 
 .internship-section .timeline .timeline-text p {
   margin: 0;
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
+
 }
 
 /*-------------------------------------
         4.  Projects
 --------------------------------------*/
 #projects {
-  padding: 40px 0;
-  margin:0 0 20px;
+  padding: 10px 0;
+  margin:0 0 5px;
 }
 
 #projects .sub-title {
@@ -556,7 +521,8 @@ border-color: transparent #dddddd transparent transparent;
 .project-list {
   display: flex;
   justify-content: space-between;
-  margin: 5px 30px 10px;
+  margin: 5px 15px 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -568,13 +534,16 @@ border-color: transparent #dddddd transparent transparent;
   text-align: center;
   padding: 10px;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+ 
 }
 
 .title a {
@@ -583,7 +552,7 @@ border-color: transparent #dddddd transparent transparent;
   font-size: 20px;
   border-radius: 50%;
   padding: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .col1 p {
@@ -597,7 +566,7 @@ border-color: transparent #dddddd transparent transparent;
   overflow: hidden;
   transform: height 0.5s;
   margin: 10px 20px 0;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   margin-bottom: 0px;
 }
 .col1{
@@ -633,25 +602,34 @@ border-color: transparent #dddddd transparent transparent;
   font-size: 15px;
   border-radius: 50%;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .col2:hover .layer {
   height: 100%;
 }
+#projects h2{
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
 
 </style>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color:white;text-align:center; color:white; font-size:large; margin: top 50px;">
-    <div class="left" style="font-size: 1.5rem; color: #d27e1e;">Manjula's Portfolio</div>
-    <div class="right">
-        <ul style="padding: 0; display: flex; margin-top:0px">
-            <li style="list-style: none; margin: 0 20px;"><a href="#education" style="color: rgb(49, 79, 228); text-decoration: none;">Education</a></li>
-            <li style="list-style: none; margin: 0 20px;"><a href="#skills" style="color: #d27e1e; text-decoration: none;">Skills</a></li>
-            <li style="list-style: none; margin: 0 20px;"><a href="#experience" style="color: rgb(49, 79, 228); text-decoration: none;">Experience</a></li>
-            <li style="list-style: none; margin: 0 20px;"><a href="#projects" style="color: #d27e1e; text-decoration: none;">Projects</a></li> 
-        </ul>
-    </div>
+<nav style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color:white;text-align:center; font-size:large;overflow: hidden; margin:0px 5px;padding: 0 20px;">
+  <div class="left" style="font-size: 1.5rem; color: #d27e1e;">Manjula's Portfolio</div>
+  <div class="right" style="margin:0px">
+      <ul style="padding: 0; display: flex; margin:0; ">
+          <li style="list-style: none; margin: 0 10px;"><a href="#education" style="display: block; text-align: center; text-decoration: none;" onmouseover="this.style.backgroundColor='#111'" onmouseout="this.style.backgroundColor='';">Education</a></li>
+          <li style="list-style: none; margin: 0 10px;"><a href="#skills" style="display: block; text-align: center; text-decoration: none;" onmouseover="this.style.backgroundColor='#111'" onmouseout="this.style.backgroundColor=''">Skills</a></li>
+          <li style="list-style: none; margin: 0 10px;"><a href="#projects" style=" display: block; text-align: center; text-decoration: none;" onmouseover="this.style.backgroundColor='#111'" onmouseout="this.style.backgroundColor=''">Projects</a></li>
+          <li style="list-style: none; margin: 0 10px;"><a href="#experience" style="display: block; text-align: center; text-decoration: none;" onmouseover="this.style.backgroundColor='#111'" onmouseout="this.style.backgroundColor=''">Experience</a></li> 
+          <li style="list-style: none; margin: 0 10px;"><a href="#experience1" style=" display: block; text-align: center; text-decoration: none;" onmouseover="this.style.backgroundColor='#111'" onmouseout="this.style.backgroundColor=''">Acheviements</a></li> 
+      </ul>
+  </div>
 </nav>
 
 </header>
@@ -705,7 +683,7 @@ border-color: transparent #dddddd transparent transparent;
                   </div>
                   <h4>Government Junior Girls College</h4>
                   <p>
-                      Devarakonda, Nalgonda, TS.
+                      Devarakonda, Nalgonda, Telangana.
                   </p>
               </div>
           </div>
@@ -717,7 +695,7 @@ border-color: transparent #dddddd transparent transparent;
                   </div>
                   <h4>Z.P.P Girls High School</h4>
                   <p>
-                    Devarakonda, Nalgonda, TS.
+                    Devarakonda, Nalgonda, Telangana.
                   </p>
               </div>
           </div>
@@ -828,24 +806,7 @@ border-color: transparent #dddddd transparent transparent;
     </div>
   </div>
 </section>
-<!-- Internship Experience Section -->
-<section id="experience" class="internship-section" style="position: center;">
-  <div class="container">
-    <div class="education-item" data-wow-delay="0.1s">
-      <h2>INTERNSHIP EXPERIENCE</h2>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item center wow slideInCenter" data-wow-delay="0.1s">
-        <div class="timeline-text">
-          <div class="timeline-date" style="text-align: center;">Dec-2023 - Present</div>
-          <h2 style="color: hsl(245, 100%, 50%);">Backend(Python) Intern</h2>
-          <h4 style="color: #12eb2b;">BAOIAM INNOVATION PVT LTD</h4>
-          <p>Description of responsibilities and tasks during the internship.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- Projects Section -->
 <section id="projects" class="projects-section">
@@ -856,10 +817,10 @@ border-color: transparent #dddddd transparent transparent;
 <div class="project-list" style="padding: 0px;">
   <div class="col1">
       <div class="title">
-          <h4 style="color: rgb(255, 157, 0);">1. SKIN-SAVIOUR</h4>
+          <h4 style="color: #e80f0f;">1. SKIN-SAVIOUR</h4>
           <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
       </div>
-      <p>It is a website which offers an innovative platform where users embark on a discovery of their skin's unique needs through an engaging quiz experience.</p>
+      <p> It is a website which offers an innovative platform where users embark on a discovery of their skin's unique needs through an engaging quiz experience.</p>
   </div>
   <div class="col2">
       <img src="{% static 'assets/img/Skin-Saviour.png' %}" alt="No-img" class="image1">
@@ -873,7 +834,7 @@ border-color: transparent #dddddd transparent transparent;
 <div class="project-list" style="padding: 0px;">
   <div class="col1">
       <div class="title">
-          <h4 style="color: rgb(255, 157, 0);"> 2. EMPLOYEE MANAGEMENT SYSTEM</h4>
+          <h4 style="color: hsl(228, 100%, 50%);"> 2. EMPLOYEE MANAGEMENT SYSTEM</h4>
           <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
       </div>
       <p>Designed and implemented core functionalities allowing users to manage employee records, including adding, removing, and filtering employees before authentication.</p>
@@ -891,7 +852,7 @@ border-color: transparent #dddddd transparent transparent;
 <div class="project-list">
   <div class="col1">
       <div class="title">
-          <h4 style="color: rgb(255, 157, 0);">3. MR RESTAURANT WEBSITE</h4>
+          <h4 style="color: hsl(109, 100%, 50%);">3. MR RESTAURANT WEBSITE</h4>
           <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
       </div>
       <p>1. Designed to showcase MR Restaurant's offerings and facilitate customer engagement through a user-friendly interface.</p>
@@ -905,28 +866,50 @@ border-color: transparent #dddddd transparent transparent;
       </div>
   </div>
 </div>
-</div>
-<hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
-<div class="project-list">
-  <div class="col1">
-      <div class="title">
-          <h4 style="color: rgb(255, 157, 0);">4. PORTFOLIO WEBSITE</h4>
-          <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-      <p>1. I developed a portfolio using Django, showcasing my educations, skills, experiences, and projects.</p>
-      <p>2. With Django, I crafted a dynamic and visually appealing portfolio, presenting my professional journey and achievements effectively.</p>
-  </div>
-  <div class="col2">
-      <img src="{% static 'assets/img/portfolio.png' %}" alt="No-img" class="image1">
-      <div class="layer">
-          <h4>Click on the below link to see Overview of the project.</h4>
-          <a href="https://my-portfolio-k0f7.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-  </div>
-</div>
+</d
 </div>
 </section>
 
+<!-- Internship Experience Section -->
+<section id="experience" class="internship-section" style="position: center;width:100%">
+  <div class="container">
+    <div class="education-item" data-wow-delay="0.1s"; >
+      <h2>INTERNSHIP EXPERIENCE</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item center wow slideInCenter" data-wow-delay="3.1s">
+        <div class="timeline-text">
+          <div class="timeline-date" style="text-align: center;">Dec-2023 - Present</div>
+          <h2 style="color: hsl(245, 100%, 50%);">Backend(Python) Intern</h2>
+          <h4 style="color: hsl(322, 86%, 50%);">BAOIAM INNOVATION PVT LTD</h4>
+          <p>1.	Work on live projects under the guidance of experienced mentors to gain practical Knowledge and skills required to excel in a professional environment.</p>
+          <p>2. Analyzed project requirements and contributed to the design and development of scalable and efficient backend systems using python and Django and relevant technologies.</p>
+        <p>3. Participated in code reviews and debugging sessions, identify and resolving technical issues to ensure the reliability and robustness of backend applications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Acheviements Section -->
+<section id="experience1" class="internship-section" style="position: center;">
+  <div class="container">
+    <div class="education-item" data-wow-delay="0.1s";>
+      <h2>ACHEVIEMENTS</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item center wow slideInCenter" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <a><div class="timeline-date" style="text-align: center;"></div>
+          <a href="https://www.hackerrank.com/profile/jatavathmanjula3" target="_blank">
+          <h2 style="color: hsl(154, 100%, 40%);">HackerRank</h2></a>
+          <h4 style="color: hsl(700, 100%, 30%);">4th Star in Problem Solving</h4> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- End Main Section -->
 </main>

@@ -1,6 +1,6 @@
 {% extends 'basic.html' %} 
 {% block title %} Blog{% endblock title %}
-
+{% load static %}
 {% block body %} 
 <section id="services" class="services">
       <div class="container">
@@ -12,27 +12,25 @@
         </div>
 
         <div class="row">
-
 {% for post in posts reversed %}
-
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-
-            <div class="col-lg-4" data-aos="fade-right">
-            <img src={{ post.img.url }} alt="no-image">
-          </div>
-          <br>
-
-            <div class="icon"><i class="bi bi-briefcase"></i>
-            <h4 class="title"><a href="">{{post.title}}</a></h4>
-
-            <p class="description">{{post.description}}</p>
-            <h6>Posted By : <b>{{post.authname}} </b></h6>
-            <p>Posted on : <b>{{post.timeStamp}} </b></p>
-          </div>
-          </div>
-
+    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+        <div class="col-lg-4" data-aos="fade-right">
+            {% if post.img %}
+                <img src="{{ post.img.url }}" alt="no-image">
+            {% else %}
+                <img src="{% static 'static\assets\img\hero-bg1.jpg' %}" alt="no-image">
+            {% endif %}
+        </div>
+        <br>
+        <div class="icon">
+            <i class="bi bi-briefcase"></i>
+            <h4 class="title"><a href="">{{ post.title }}</a></h4>
+            <p class="description">{{ post.description }}</p>
+            <h6>Posted By: <b>{{ post.authname }}</b></h6>
+            <p>Posted on: <b>{{ post.timeStamp }}</b></p>
+        </div>
+    </div>
 {% endfor %}
-
 
          
          
