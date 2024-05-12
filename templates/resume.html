@@ -1,4 +1,5 @@
-<!-- about.html -->
+
+ <!-- about.html -->
 {% extends "basic.html" %} 
 {% load static %}
 
@@ -12,6 +13,26 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
+<style>
+  /* Custom styles */
+  .contact-info {
+    margin-top: 30px;
+  }
+  .contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .contact-info p strong {
+    margin-right: 5px;
+  }
+  .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+</style>
 {% endblock stylecss %} 
 
 
@@ -25,10 +46,15 @@
         <h3>Summary :</h3> 
         <p>Enthusiastic and dedicated Python Developer with a solid foundation in Python, Django, HTML5, CSS3, and MySQL. Eager to kickstart a career in software development, leveraging a passion for coding to contribute effectively to innovative projects. Committed to ongoing growth, embracing new challenges, and staying abreast of industry advancements through continuous learning.</p>
       </div>
-      <hr class="section-line">
-      <p><strong>Email :</strong> manjulajatavath554@gmail.com | <strong>Phone :</strong> 6302389676</p>
-      <p><strong>Location :</strong> Telangana, India | <strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/manjula-jatavath-9b3113284/" target="_blank">manjula-jatavath</a> | <strong>GitHub :</strong> <a href="https://github.com/ManjulaJatavath" target="_blank">ManjulaJatavath</a></p>
-    </div>
+      <hr class="section-line"> 
+      <div class="contact-info">
+        <h3>Contact Information:</h3>
+        <p><strong>Email:</strong> <a href="mailto:manjulajatavath554@gmail.com">manjulajatavath554@gmail.com</a></p>
+        <p><strong>Phone:</strong> 6302389676</p>
+        <p><strong>Location:</strong> Telangana, India</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/manjula-jatavath-9b3113284/" target="_blank">manjula-jatavath</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/ManjulaJatavath" target="_blank">ManjulaJatavath</a></p>
+      </div>
     <div class="section-content">
       <h3>Education :</h3>
       <ul>
@@ -50,12 +76,12 @@
       
       <h3>Personal Projects :</h3>
       <ul>
-        <li><strong>Health Provider Finder</strong></li>
-        <li>A Python app that works with the Steer Health API to find heart health specialists. <a href="https://github.com/ManjulaJatavath/Health_Provider_Search" target="_blank">ManjulaJatavath/Health_Provider_Search</a></li>
+        <li><strong>Skin Saviour</strong></li>
+        <li>This Project built using Python and Django. <a href="https://radiat-glow-website.netlify.app" target="_blank">Skin Saviour</a></li>
         <li><strong>Office Employee Management System</strong></li>
-        <li>An employee management system built using Python and Django. <a href="https://github.com/ManjulaJatavath/Office-Employee-Management-System" target="_blank">ManjulaJatavath/Office-Employee-Management-System</a></li>
+        <li>An employee management system built using Python and Django. <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank">Office-Employee-Management-System</a></li>
         <li><strong>Restaurant Website</strong></li>
-        <li>A simple restaurant website using HTML and CSS. <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank">ManjulaJatavath/Restaurant-Website</a></li>
+        <li>A simple restaurant website using HTML and CSS. <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank">MR Restaurant-Website</a></li>
       </ul>
 
       <h3>Work Experience :</h3>
@@ -102,9 +128,10 @@
         <li><a href="https://www.hackerrank.com/profile/jatavathmanjula3" target="_blank">HACKERRANK 4th Star in problem solving - jatavathmanjula3</a></li>
       </ul>
 
-      <h3>Certificate :</h3>
+      <h3>Certificates :</h3>
       <ul>
-        <li><a href="https://www.sololearn.com/en/certificates/CC-VN03VA8S" target="_blank">Python Developer (09/2023)</a></li>
+        <li><a href="file:///C:/Resume/UC-cerificate.pdf" target="_blank">Python(04/2024)</a></li>
+        <li><a href="https://certificates.simplicdn.net/share/thumb_5066474_1713777282.png" target="_blank">Django (04/2024)</a></li>
         <li><a href="https://olympus.mygreatlearning.com/courses/21462/certificate" target="_blank">MySQL Database (09/2023)</a></li>
         <li><a href="https://moonshot.scaler.com/s/sl/cEyWanGbMZ?_gl=1*6v1n7*_ga*MTk2NDEwNTY2MC4xNjkwNjA4ODky*_ga_53S71ZZG1X*MTY5MDcwNDQ4Mi4zLjEuMTY5MDcxMDEyNi4wLjAuMAlink_to_python_certificate" target="_blank">HTML (06/2023 - 07/2023)</a></li>
       </ul>
@@ -139,8 +166,9 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   <div style="text-align: center; margin-top: 50px;">
-  <a href={% static 'assets/resume/Manjula_s_Resume_(1)[1].pdf' %} download="Manjula_s_Resume_(1)[1].pdf" class="btn btn-primary">
+  <a href={% static 'assets/resume/Manjula Resume.docx' %} download="Manjula_s_Resume_(1)[1].pdf" class="btn btn-primary">
       <i class="fas fa-download"></i> Download Resume </a> 
   </div>
 </section>
 {% endblock body %}
+

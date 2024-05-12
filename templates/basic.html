@@ -8,8 +8,6 @@
     <title>{% block title %}{% endblock title %}</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
-
-    {% comment %} Manjula {% endcomment %}
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
@@ -97,17 +95,17 @@
             </li>
             <li>
               <a href="/resume/" class="nav-link scrollto"
-                ><i class="bx bx-user"></i> <span>Resume</span></a
+                ><i class="fas fa-file-alt"></i> <span>Resume</span></a
               >
-            </li>
+            </li> 
              <li>
               <a href="/blog/" class="nav-link scrollto"
-                ><i class="bx bx-file-blank"></i> <span>Blog</span></a
+                ><i class="fas fa-blog"></i> <span>Blog</span></a
               >
             </li> 
             <li>
               <a href="/contact/" class="nav-link scrollto"
-                ><i class="bx bx-envelope"></i> <span>Contact</span></a
+                ><i class="bx bx-envelope"></i> <span>Contact </span></a
               >
             </li>
           </ul>
@@ -118,16 +116,28 @@
 
     <main id="main">{% block body %} {% endblock body %}</main>
 
-    <!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright  <strong><span>Manjula Portfolio</span></strong>
+          &copy;<strong><span> Manjula Portfolio</span></strong>
         </div>
-        <div class="credits">Designed by <a href="/">Manjula Jatavth</a></div>
+        <div class="credits">Designed by <span style="color: red; font-size: 20px;">&hearts;</span><a href="/">Manjula Jatavath</a><span style="color: red; font-size: 20px;">&hearts;</span></div>
       </div>
     </footer>
-    <!-- End  Footer -->
+    <!-- End  Footer --> 
+    {% comment %} <footer id="footer">
+      <div class="container">
+        <!-- Copyright Notice -->
+        <div class="copyright">
+          &copy; <strong>Manjula Portfolio</strong> <!-- Moved "Copyright" inside the strong tag for emphasis -->
+        </div>
+        <!-- Credits Section -->
+        <div class="credits">
+          Designed <span style="color: red; font-size: 20px;">&hearts;</span> by <a href="/">Manjula Jatavth</a> <!-- Corrected "Jatavth" to "Jatavath" -->
+        </div>
+      </div>
+    </footer> {% endcomment %}
 
     <a
       href="#"

@@ -1,9 +1,9 @@
-<!-- about.html -->
-{% extends "basic.html" %} 
 
-{% block title %} About {% endblock title %} 
+{% extends "basic.html" %} 
 {% load static %}
-{% block stylecss %}
+{% block title %} About {% endblock title %} 
+
+{% block body %}
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -11,16 +11,12 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
-{% endblock stylecss %} 
-
-{% block body %}
 <section id="about" class="about">
   <div class="container">
-
     <div class="section-title">
-      <h2>About</h2>
+      <h2>About Me</h2>
       <p class="light-blue-text"></p>
-      <p>Enthusiastic and dedicated Python Developer with a solid foundation in Python, Django, HTML5, CSS3, and MySQL. Eager to kickstart a career in software development, leveraging a passion for coding to contribute effectively to innovative projects. Committed to ongoing growth, embracing new challenges, and staying abreast of industry advancements through continuous learning.</p>
+      <p>{{ about_text }}</p>
     </div>
 
     <div class="row">
@@ -35,23 +31,27 @@
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 Aug 2001</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>6302389676</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Hyderabad, Telangana</span></li>
+              <li><strong>Birthday:</strong> <span>{{ profile_info.birthday }}</span></li>
+              <li><strong>Phone:</strong> <span>{{ profile_info.phone }}</span></li>
+              <li><strong>City:</strong> <span>{{ profile_info.city }}</span></li>
             </ul>
           </div>
           <div class="col-lg-6">
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSC</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>manjulajatavath554@gmail.com</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+              <li><strong>Age:</strong> <span>{{ profile_info.age }}</span></li>
+              <li><strong>Degree:</strong> <span>{{ profile_info.degree }}</span></li>
+              <li><strong>Email:</strong> <span>{{ profile_info.email }}</span></li>
+              <li><strong>Freelance:</strong> <span>{% if profile_info.freelance %}Available{% else %}Not Available{% endif %}</span></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <div style="text-align: center; margin-top: 50px;">
+    <a href={% static 'assets/resume/Manjula Resume.docx' %} download="Manjula_s_Resume_(1)[1].pdf" class="btn btn-primary">
+        <i class="fas fa-download"></i> Download Resume </a> 
+    </div>
   </div>
 </section>
 {% endblock body %}

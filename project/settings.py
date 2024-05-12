@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hq8!1moc8nkm@vxo6@myni8^usz=x!%0c&bbxsea++=kj=#q+u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-portfolio-k0f7.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['my-portfolio-k0f7.onrender.com', '127.0.0.1']
 
 
 
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Portfolio',
+        'USER' : 'postgres',
+        'PASSWORD':'Manjula',
+        'HOST':'localhost',
+        'PORT':'5432'
     }
 }
 

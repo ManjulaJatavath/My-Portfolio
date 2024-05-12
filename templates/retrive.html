@@ -1,354 +1,380 @@
-{% comment %} 
-<div id="projects">
-        <div class="container">
-            <div class="sub-title">Projects</div>
-            <div class="project-list">
-                <div class="col1">
-                    <div class="title">
-                        <h4>SKIN-SAVIOUR</h4>
-                        <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                    <p>It is a website which offers an innovative platform where users embark on a discovery of their skin's unique needs through an engaging quiz experience.  
-                    </p>
-                </div>
-                <div class="col2">
-                    <img src="images/project1.png" alt="" class="image1">
-                    <div class="layer">
-                        <h4>Click on the below link to see Overview of the project.</h4>
-                        <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                         </div>
-                    </div>
-            </div>
-        </div>
-    </div>
- {% endcomment %}
 
- {% comment %} 
- <section id="projects" class="projects-section">
-  <div class="container">
-    <div class="row">
-      <div class="projects-item">
-        <h1>PROJECTS</h1>
-      </div>
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %}
+Manjula Portfolio
+{% endblock title %}
+{% block stylecss %} 
+{% endblock stylecss %}
+{% block body %}
+
+<!-- Navigation Bar -->
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="static\assets\css\home.css">
+<nav id="navbarr" class="navbarr" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color:black;text-align:center; font-size:large;overflow: hidden; margin:0px 0px;padding: 40px 18px;border: 10px;">
+  <div class="left" style="font-size: 1.5rem;color: hsl(32deg 88.68% 54.1%);">Manjula's Portfolio</div>
+  <div class="right" style="margin:5px;display: inline-block;">
+      <ul class="nav-links"style="padding: 40px 20px; display: flex; margin: 130px;width: 100%;">        
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#education" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px;" onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor='#007bff';">Education</a></li>
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#skills" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px; " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Skills</a></li>
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#projects" style=" display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px  " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Projects</a></li>
+          <li class="nav-item" style="list-style: none; margin: 10 10px;"><a href="#experience" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px  " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Experience</a></li> 
+          <li class="nav-item" style="list-style: none; margin: 10 10px;"><a href="#experience1" style=" display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Acheviements</a></li> 
+      </ul>
+  </div>
+</nav>
+<style>
+  @media only screen and (max-width: 768px) {
+      .nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px;
+      }
+      .right {
+          margin-top: 50px;
+      }
+      .navbarr{
+        margin: left 30px;;
+        margin: right 20%;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin: 20px 0;
+    }
+
+      .nav-item {
+        margin: 10px 0;
+    }
+  }
+
+    nav#navbarr.navbarr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      background-color: black;
+      text-align: center;
+      font-size: large;
+      overflow: hidden;
+      margin: 2px 0px;
+      padding: 30px 60px;
+      position: fixed;
+      z-index: 1000;
+      top: 0px;
+    }
+    @media only screen and (max-width: 768px) {
+      .right {
+          margin-top: 0px 0px;
+
+      }
+      .left{
+        margin-top: 0px;
+      }
+  }
+</style>
+</header>
+<!-- ======= Main Section ======= -->
+
+  <main>
+  <!-- About Section -->
+  <section class="firstSection">
+    <div class="leftSection">
+      <h4>Hi,</h4>
+      <h1><span class="small-text">My Name is</span> <span class="color">Manjula</span></h1>
+      <p>I'm passionate <span class="typed" data-typed-items="Python Developer, Backend Developer"></span></p>
+      <a class="btn-solid-lg page-scroll" href="/about/"><i class="fas fa-user"></i> Discover</a>
+      <a class="btn-outline-lg page-scroll" href="/contact/"><i class="fas fa-envelope"></i> Contact Me</a>
+      <a class="btn-solid-lg page-scroll" href="static\assets\resume\Manjula Resume.docx" download>
+        <i class="fas fa-file-alt"></i> Download CV
+    </a>
+  </div>
     </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="project1.jpg" alt="Project 1">
-          <div class="overlay">
-            <h4>Project 1</h4>
-            <p>Description of Project 1</p>
-            <a href="project1.html">View Details</a>
+    <div class="rightSection">
+      <img src="static\assets\img\img2.jpeg" alt="" class="round-img">
+    </div>
+  </section>
+  {% for message in messages %}    
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  <hr style="border-color: #d27e1e; border-radius: 10px; height: 1px;">
+  <!-- Education Section -->
+<section class="education" id="education">
+  <div class="container">
+      <div class="education-item" data-wow-delay="0.1s">
+          <h2>EDUCATION</h2>
+      </div>
+      <div class="timeline">
+          <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+              <div class="timeline-text">
+                  <div style="float: right; margin-right: 20px;">
+                      <img src="static\assets\img\clg logo.jpg" alt="College Logo" style="display: block; max-width: 110px; height: auto; top: -10px; position: relative;">
+                  </div>
+                  <div>
+                      <div class="timeline-date">2018 - 2022</div>
+                      <div class="h2-tag">
+                          <h2>BACHELOR'S DEGREE (BSC)</h2>
+                      </div>
+                      <h4>Government Degree College for Women's</h4>
+                      <p>
+                          Nalgonda, Telangana.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+              <div class="timeline-text">
+                <div style="float: right; margin-right: 20px;">
+                  <img src="static\assets\img\TSBIE_Logo.jpg" alt="College Logo" style="display: block; max-width: 110px; height: auto; top: -10px; position: relative;">
+              </div>
+                  <div class="timeline-date">2016 - 2018</div>
+                  <div class="h2-tag">
+                    <h2>INTERMEDIATE - XII (BIPC)</h2>
+                  </div>
+                  <h4>Government Junior Girls College</h4>
+                  <p>
+                      Devarakonda, Nalgonda, Telangana.
+                  </p>
+              </div>
+          </div>
+          <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+              <div class="timeline-text">
+                <div style="float: right; margin-right: 20px;">
+                  <img src="static\assets\img\ts logo.jpg" alt="College Logo" style="display: block; max-width: 110px; height: auto; top: -10px; position: relative;">
+              </div>
+                  <div class="timeline-date">2015 - 2016</div>
+                  <div class="h2-tag">
+                    <h2> SSC - X <sup>th</sup></h2>
+                  </div>
+                  <h4>Z.P. Girls High School</h4>
+                  <p>
+                    Devarakonda, Nalgonda, Telangana.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Education End -->
+     
+<!--skills Section -->
+<section id="skills" class="skills">
+  <div class="skill-content">
+    <div class="section-heading text-center">
+      <h2>My skills</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="single-skill-content">
+            <div class="barWrapper">
+              <span class="progressText"><i class="fab fa-python icon"></i>Python Programming</span>
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                </div>
+                <h3>90%</h3>	
+              </div>
+            </div>
+            
+            <div class="barWrapper">
+              <span class="progressText"><i class="fas fa-database icon"></i>MySQL</span>
+
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                </div>
+                <h3>85%</h3>	
+              </div>
+            </div>
+            
+            <div class="barWrapper">
+              <span class="progressText"><i class="fab fa-cogs icon"></i>Django Framework</span>
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                </div>
+                <h3>90%</h3>	
+              </div>
+            </div>
+            
+            <div class="barWrapper">
+              <span class="progressText"><i class="fas fa-file-alt icon"></i>MS Office</span>
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                </div>
+                <h3>90%</h3>	
+              </div>
+            </div>
+            
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="project2.jpg" alt="Project 2">
-          <div class="overlay">
-            <h4>Project 2</h4>
-            <p>Description of Project 2</p>
-            <a href="project2.html">View Details</a>
-          </div>
-        </div>
-      </div>
-      <!-- Add more project items as needed -->
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="project3.jpg" alt="Project 3">
-          <div class="overlay">
-            <h4>Project 3</h4>
-            <p>Description of Project 3</p>
-            <a href="project3.html">View Details</a>
+        <div class="col-md-6">
+          <div class="single-skill-content">
+            
+            <div class="barWrapper">
+              <span class="progressText"><i class="fab fa-html5 icon"></i>HTML5</span>
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                </div>
+                <h3>90%</h3>	
+              </div>
+            </div>
+            
+            <div class="barWrapper">
+              <span class="progressText"><i class="fab fa-css3 icon"></i>CSS3</span>
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                </div>
+                <h3>85%</h3>	
+              </div>
+            </div>
+            
+            <div class="barWrapper">
+              <span class="progressText"><i class="fab fa-cogs icon"></i>Communication</span>
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100" style="width: 97%;"></div>
+                </div>
+                <h3>97%</h3>	
+              </div>
+            </div>
+            
+            <div class="barWrapper">
+              <span class="progressText"><i class="fas fa-cogs icon"></i>Problem Solving</span>
+              <div class="single-progress-txt">
+                <div class="progress ">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                </div>
+                <h3>90%</h3>	
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
- {% endcomment %}
-
- {% comment %} 
- .projects-item h1 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c; /* Adjust this color as needed */
-  text-align: center;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.projects-item h1::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px; /* Adjust this width as needed */
-  height: 2px;
-  background-color: #1594c7; 
-}
-.projects-section{
-  height: 50vh;
-}
-  {% endcomment %}
-  #projects {
-    padding: 100px 0;
-  }
-  
-  .sub-title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 26px;
-    color: #173b6c;
-    margin-bottom: 100px;
-    position: relative; /* Add position relative for the underline effect */
-  }
-  
-  .sub-title::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px; /* Adjust this width as needed */
-    height: 2px;
-    background-color: #1594c7;
-  }
-  
-  .project-list {
-    display: flex;
-    flex-direction: column; /* Display projects in a column */
-    align-items: center; /* Center projects horizontally */
-    margin: 100px 0;
-  }
-  
-  .project {
-    margin-bottom: 50px; /* Adjust margin between projects */
-  }
-  
-  .title {
-    text-align: center; /* Center project titles */
-    margin-bottom: 15px;
-  }
-  
-  .title h4 {
-    font-size: 30px;
-  }
-  
-  .title a {
-    color: #7f00ff;
-    background: white;
-    font-size: 20px;
-    border-radius: 50%;
-    padding: 10px;
-  }
-  
-  .project p {
-    text-align: center; /* Center project descriptions */
-    font-size: 50px;
-  }
-  .col1 {
-    width: 50%; /* Set width to 100% to ensure full width */
-    position: relative;
-    overflow: hidden;
-  }
-  .col1{
-    flex-basis: 55%;
-  }
-  
-  .col2 {
-    width: 50%; /* Set width to 100% to ensure full width */
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .col2 .image1 {
-    width: 100%;
-    border-radius: 20px;
-  }
-  
-  .layer {
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #b4854d);
-    border-radius: 20px;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 30px;
-    text-align: center;
-    transition: height 0.5s;
-  }
-  
-  .layer a {
-    color: #b4854d;
-    background: white;
-    font-size: 15px;
-    border-radius: 50%;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  
-  .col2:hover .layer {
-    height: 50%;
-  }
 
 
-  <section id="projects" class="projects-section">
-    <h2 class="sub-title" style="color: hwb(215 7% 67%); position: relative;">PROJECTS
-        <span style="position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 100px; height: 2px; background-color: #1594c7;"></span>
-    </h2>
-    <hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
-  <div class="project-list">
-    <div class="col1">
-        <div class="title">
-            <h4 style="color: rgb(255, 157, 0);">1. SKIN-SAVIOUR</h4>
-            <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-        <p>It is a website which offers an innovative platform where users embark on a discovery of their skin's unique needs through an engaging quiz experience.</p>
-    </div>
-    <div class="col2">
-        <img src="{% static 'assets/img/Skin-Saviour.png' %}" alt="No-img" class="image1">
-        <div class="layer">
-            <h4>Click on the below link to see Overview of the project.</h4>
-            <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </div>
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <h2 class="sub-title" style="color: hwb(215 7% 67%); position: relative;">PROJECTS
+      <span style="position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 100px; height: 2px; background-color: #1594c7;"></span>
+  </h2>
+  <hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+<div class="project-list" style="padding: 0px;">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: #e80f0f;">1. SKIN-SAVIOUR</h4>
+          <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p> It is a website which offers an innovative platform where users embark on a discovery of their skin's unique needs through an engaging quiz experience.</p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/Skin-Saviour.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://radiat-glow-website.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
 </div>
 <hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
-  <div class="project-list">
-    <div class="col1">
-        <div class="title">
-            <h4 style="color: rgb(255, 157, 0);"> 2. EMPLOYEE MANAGEMENT SYSTEM</h4>
-            <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-        <p>Designed and implemented core functionalities allowing users to manage employee records, including adding, removing, and filtering employees before authentication.</p>
-    </div>
-    <div class="col2">
-        <img src="{% static 'assets/img/emp-management.png' %}" alt="No-img" class="image1">
-        <div class="layer">
-            <h4>Click on the below link to see Overview of the project.</h4>
-            <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </div>
+<div class="project-list" style="padding: 0px;">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: hsl(228, 100%, 50%);"> 2. EMPLOYEE MANAGEMENT SYSTEM</h4>
+          <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p>Designed and implemented core functionalities allowing users to manage employee records, including adding, removing, and filtering employees before authentication.</p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/emp-management.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
+</div>
 </div>
 <hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
 <div class="project-list">
-    <div class="col1">
-        <div class="title">
-            <h4 style="color: rgb(255, 157, 0);">3. MR RESTAURANT WEBSITE</h4>
-            <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-        <p>1. Designed to showcase MR Restaurant's offerings and facilitate customer engagement through a user-friendly interface.</p>
-        <p>2. A dynamic website featuring sections for navigation, specials, testimonials, menu, contact, and social media integration.</p>
-    </div>
-    <div class="col2">
-        <img src="{% static 'assets/img/Restaurant_website.png' %}" alt="No-img" class="image1">
-        <div class="layer">
-            <h4>Click on the below link to see Overview of the project.</h4>
-            <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </div>
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: hsl(109, 100%, 50%);">3. MR RESTAURANT WEBSITE</h4>
+          <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p>1. Designed to showcase MR Restaurant's offerings and facilitate customer engagement through a user-friendly interface.</p>
+      <p>2. A dynamic website featuring sections for navigation, specials, testimonials, menu, contact, and social media integration.</p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/Restaurant_website.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
 </div>
 
+</div>
 </section>
 
-#projects {
-  padding: 40px 0;
-  margin:0 0 20px;
-}
+<!-- Internship Experience Section -->
+<section id="experience" class="internship-section" style="position: center;width:100%">
+  <div class="container">
+    <div class="education-item" data-wow-delay="0.1s"; >
+      <h2>INTERNSHIP EXPERIENCE</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item center wow slideInCenter" data-wow-delay="3.1s">
+        <div class="timeline-text">
+          <div class="timeline-date" style="text-align: center;">Dec-2023 - Present</div>
+          <h2 style="color: hsl(245, 100%, 50%);">Backend(Python) Intern</h2>
+          <h4 style="color: hsl(322, 86%, 50%);">BAOIAM INNOVATION PVT LTD</h4>
+          <p>1.	Work on live projects under the guidance of experienced mentors to gain practical Knowledge and skills required to excel in a professional environment.</p>
+          <p>2. Analyzed project requirements and contributed to the design and development of scalable and efficient backend systems using python and Django and relevant technologies.</p>
+        <p>3. Participated in code reviews and debugging sessions, identify and resolving technical issues to ensure the reliability and robustness of backend applications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-#projects .sub-title {
-  text-align: center;
-}
 
-.project-list {
-  display: flex;
-  justify-content: space-between;
-  margin: 50px 30px 100px;
+  <!-- Acheviements Section -->
+<section id="experience1" class="internship-section" style="position: center;">
+  <div class="container">
+    <div class="education-item" data-wow-delay="0.1s";>
+      <h2>ACHEVIEMENTS</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item center wow slideInCenter" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <a><div class="timeline-date" style="text-align: center;"></div>
+          <a href="https://www.hackerrank.com/profile/jatavathmanjula3" target="_blank">
+          <h2 style="color: hsl(154, 100%, 40%);">HackerRank</h2></a>
+          <h4 style="color: hsl(700, 100%, 30%);">4th Star in Problem Solving</h4> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- End Main Section -->
+</main>
 
-}
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+{% endblock body %}
 
-.col1 {
-  flex-basis: 55%;
-}
-
-.col1 .title h4 {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title a {
-  color: #7f00ff;
-  background: white;
-  font-size: 20px;
-  border-radius: 50%;
-  padding: 10px;
-  margin-bottom: 40px;
-}
-
-.col1 p {
-  text-align: center;
-  font-size: 20px;
-}
-
-.col2 {
-  flex-basis: 40%;
-  position: relative;
-  overflow: hidden;
-  transform: height 0.5s;
-  margin: 10px 20px 0;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
-}
-.col1{
-  margin-bottom: 0;
-}
-.col2 .image1 {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-
-.layer {
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(rgba(0,0,0,0.6), #b4854d);
-  border-radius: 20px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  transition: height 0.5s;
-}
-
-.layer a {
-  color: #b4854d;
-  background: white;
-  font-size: 15px;
-  border-radius: 50%;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-.col2:hover .layer {
-  height: 100%;
-}
+{% block scripts %}
+{% endblock scripts %}

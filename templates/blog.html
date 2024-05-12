@@ -1,95 +1,145 @@
-{% extends 'basic.html' %} 
+{% extends 'basic.html' %}
 {% block title %} Blog{% endblock title %}
 {% load static %}
-{% block body %} 
-<section id="services" class="services">
-      <div class="container">
+{% block stylecss %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  intergrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
 
-        <div class="section-title">
-          <h2>Welcome to My Blog</h2>
-          <p>You Can find the latest information on this page.</p>
-         
-        </div>
+  .blog-box {
+    background: linear-gradient(45deg, #ff69b4, #000000);
+    border: 4px solid;
+    border-image: linear-gradient(45deg, #ff69b4, #000000) 1;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out;
+  }
 
-        <div class="row">
-{% for post in posts reversed %}
-    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-        <div class="col-lg-4" data-aos="fade-right">
-            {% if post.img %}
-                <img src="{{ post.img.url }}" alt="no-image">
-            {% else %}
-                <img src="{% static 'static\assets\img\hero-bg1.jpg' %}" alt="no-image">
-            {% endif %}
-        </div>
-        <br>
-        <div class="icon">
-            <i class="bi bi-briefcase"></i>
-            <h4 class="title"><a href="">{{ post.title }}</a></h4>
-            <p class="description">{{ post.description }}</p>
-            <h6>Posted By: <b>{{ post.authname }}</b></h6>
-            <p>Posted on: <b>{{ post.timeStamp }}</b></p>
-        </div>
-    </div>
-{% endfor %}
+  .blog-box:hover {
+    transform: translateY(-5px);
+  }
 
-         
-         
-        </div>
+  .blog-img img {
+    width: 100%;
+    height: 400px; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+  }
 
+  .blog-content {
+    padding: 20px;
+  }
+
+  .blog-content h4.title {
+    margin-top: 0;
+    font-size: 20px;
+    color: blue;
+  }
+
+  .blog-content p.description {
+    margin-bottom: 10px;
+  }
+
+  .blog-content h6,
+  .blog-content p {
+    margin-bottom: 5px;
+    color: black;
+  }
+
+  .smooth-transition {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Define the animation */
+  @keyframes dance {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .blog-box.active {
+    animation: dance 1s infinite; 
+  }
+</style>
+{% endblock stylecss %}
+{% block body %}
+<main>
+  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </header>
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Welcome to My Blogs</h2>
+        <p>You can find the latest information on this page.</p>
       </div>
-    </section><!-- End Services Section -->
-{% endblock body %}
- {% comment %}
-     <div class="section-title">
-      <h2>Welcome To My Blogs</h2>
-      <p>You Can find the latest information on this blogs page.</p>
+      <div class="row">
+        {% for post in posts reversed %}
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="blog-box" data-aos="fade-right" id="blog-{{ forloop.counter }}">
+            <div class="blog-img">
+              {% if post.img %}
+              <img src="{{ post.img.url }}" alt="Blog Image">
+              {% else %}
+              <img src="{% static 'static\assets\img\hero-bg1.jpg' %}" alt="Default Blog Image">
+              {% endif %}
+            </div>
+            <div class="blog-content">
+              <h4 class="title">{{ post.title }}</h4>
+              <p class="description">{{ post.description }}</p>
+              <h6>Posted By: <b>{{ post.authname }}</b></h6>
+              <p>Posted on: <b>{{ post.timeStamp }}</b></p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-  <div class="icon"><i class="bi bi-briefcase"></i></div>
-  <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-  <p class="description">
-    Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
-    sint occaecati cupiditate non provident
-  </p>
-</div>
-<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-  <div class="icon"><i class="bi bi-card-checklist"></i></div>
-  <h4 class="title"><a href="">Dolor Sitema</a></h4>
-  <p class="description">
-    Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-    ea commodo consequat tarad limino ata
-  </p>
-</div>
-<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-  <div class="icon"><i class="bi bi-bar-chart"></i></div>
-  <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-  <p class="description">
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur
-  </p>
-</div>
-<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-  <div class="icon"><i class="bi bi-binoculars"></i></div>
-  <h4 class="title"><a href="">Magni Dolores</a></h4>
-  <p class="description">
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum
-  </p>
-</div>
-<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-  <div class="icon"><i class="bi bi-brightness-high"></i></div>
-  <h4 class="title"><a href="">Nemo Enim</a></h4>
-  <p class="description">
-    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-    praesentium voluptatum deleniti atque
-  </p>
-</div>
-<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-  <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-  <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-  <p class="description">
-    Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-    tempore, cum soluta nobis est eligendi
-  </p>
-</div>
-{% endcomment %}
+  </section>
+</main>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const blogBoxes = document.querySelectorAll('.blog-box');
+    blogBoxes.forEach(blogBox => {
+      blogBox.addEventListener('mouseenter', () => {
+        blogBox.classList.add('active');
+      });
+
+      blogBox.addEventListener('mouseleave', () => {
+        blogBox.classList.remove('active');
+      });
+    });
+  });
+</script>
+{% endblock body %}
+
+
+
+
+
