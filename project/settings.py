@@ -82,6 +82,8 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME', 'Portfolio'),
         'USER' : os.getenv('DB_USER', 'postgres'),
         'PASSWORD': os.getenv('DB_PASSWORD', 'Manjula'),
+        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
+        'PORT': os.getenv('DB_PORT', '5432')
     }
 }
 
