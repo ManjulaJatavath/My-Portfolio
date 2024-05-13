@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-hq8!1moc8nkm@vxo6@myni8^usz=x!%0c&bbxsea++=kj=#q+u')
+SECRET_KEY = 'django-insecure-hq8!1moc8nkm@vxo6@myni8^usz=x!%0c&bbxsea++=kj=#q+u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['my-portfolio-k0f7.onrender.com', '127.0.0.1', '127.0.0.1:10000']
 
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,9 +81,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':  'Portfolio',
         'USER' : 'postgres',
-        'PASSWORD': 'Manjula',
-        'HOST': 'localhost', 
-        'PORT': '5432',  
+        'PASSWORD':'Manjula',
+        'HOST':'localhost',
+        'PORT':'5432'
     }
 }
 
@@ -123,10 +123,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 
 # Default primary key field type
@@ -134,8 +138,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
+MESSAGE_TAGS={
+    messages.ERROR:'danger'
 }
 
 # settings.py
