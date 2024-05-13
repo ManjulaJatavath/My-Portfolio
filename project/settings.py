@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-hq8!1moc8nkm@vxo6@m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['my-portfolio-k0f7.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['my-portfolio-k0f7.onrender.com', '127.0.0.1', '127.0.0.1:10000']
 
 
 
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'Portfolio'),
-        'USER' : os.getenv('DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'Manjula'),
-        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
-        'PORT': os.getenv('DB_PORT', '5432')
+        'NAME':  'Portfolio',
+        'USER' : 'postgres',
+        'PASSWORD': 'Manjula',
+        'HOST': 'localhost', 
+        'PORT': '5432',  
     }
 }
 
