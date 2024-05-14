@@ -30,7 +30,7 @@ def resume(request):
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
-        email = request.user.email if request.user.is_authenticated else None
+        email = request.POST.get('email')
         phone = request.POST.get('num')
         message = request.POST.get('message')
 
