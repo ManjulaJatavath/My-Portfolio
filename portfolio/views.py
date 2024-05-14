@@ -42,6 +42,7 @@ def contact(request):
 
     return render(request, 'contact.html')
 
+
 def blog(request):
 
     posts=Blogs.objects.all()
