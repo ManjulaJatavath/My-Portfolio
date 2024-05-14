@@ -76,18 +76,27 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Portfolio',
+#         'USER' : 'postgres',
+#         'PASSWORD':'Manjula',
+#         'HOST':'localhost',
+#         'PORT':'5432'
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Portfolio',
-        'USER' : 'postgres',
-        'PASSWORD':'Manjula',
-        'HOST':'localhost',
-        'PORT':'5432'
+        'USER': 'Manjula',
+        'PASSWORD': 'Manjula@123',
+        'HOST': 'localhost',  # or '127.0.0.1' for IP address
+        'PORT': '3306',  # or the port where MySQL is running
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
