@@ -15,19 +15,20 @@ from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+import dj_database_url
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hq8!1moc8nkm@vxo6@myni8^usz=x!%0c&bbxsea++=kj=#q+u'
-
+# SECRET_KEY = 'django-insecure-hq8!1moc8nkm@vxo6@myni8^usz=x!%0c&bbxsea++=kj=#q+u'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG","False").lower()=="true"
+# DEBUG = True
 
-ALLOWED_HOSTS = ['my-portfolio-k0f7.onrender.com', '127.0.0.1']
-
+# ALLOWED_HOSTS = ['my-portfolio-k0f7.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -76,17 +77,20 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Portfolio',
+#         'USER' : 'postgres',
+#         'PASSWORD':'Manjula',
+#         'HOST':'127.0.0.1',
+#         'PORT':'5432'
+#     }
+# }
+database_url = os.environ.get("DATABASE_URL")
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Portfolio',
-        'USER' : 'postgres',
-        'PASSWORD':'Manjula',
-        'HOST':'127.0.0.1',
-        'PORT':'5432'
-    }
+    'default': dj_database_url.parse(database_url)
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
