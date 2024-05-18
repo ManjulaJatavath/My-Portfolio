@@ -79,10 +79,6 @@ Manjula Portfolio
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-internship-section .timeline .timeline-item.center {
-  left: 10%;
-  padding-right: 60px;
-}
 
 @media (max-width: 1934.98px) {
   .internship-section .timeline .timeline-item.center {
@@ -122,6 +118,7 @@ internship-section .timeline .timeline-item.center {
   }
 }
 
+
 @media only screen and (max-width: 767.98px) {
   .firstSection {
       margin: 100px 0;
@@ -155,16 +152,7 @@ internship-section .timeline .timeline-item.center {
 .left{
   margin-right: 10px;
 }
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 .firstSection {
   display: flex;
@@ -248,7 +236,7 @@ section {
 
 .education-item h2{
 font-weight: 700;
-font-size: 26px;
+font-size: 30px;
 color: #173b6c;
 text-align: center;
 margin-bottom: 30px;
@@ -459,23 +447,24 @@ font-size: 16px;
 .skill-content{
 padding-bottom: 30px;
 }
-.skill-section{
-height: 40vh;
+#skills.skils{
+  padding-top: 10px;
 }
-.single-skill-content{padding-top: 0px;}
+.skill-section{
+height: 30vh;
+}
+.single-skill-content{padding-top: 20px;}
 
 .section-heading h2 {
-font-size: 24px;
+font-size: 30px;
 font-weight: 600;
 text-transform: uppercase;
 padding-bottom: 10px;
 border-bottom: 1px solid #e5ebf2;
-text-align: center;
 margin-top: 40px;
 }
 .section-heading h2 {
 font-weight: 700;
-font-size: 26px;
 color: #173b6c;
 text-align: center;
 position: relative;
@@ -602,100 +591,102 @@ margin-right: 8px;
     3.  Internship Experience
 --------------------------------------*/
 #experience {
-padding: 10px 0;
-margin:0 0 10px;
-
-}
-.internship-container{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vw;
-
-}
-.internship-section {
-display: center;
-justify-content: center; 
-align-items: center; 
-height: 100vh; 
-width:100%
-}
-.internship-section .education-item h2 {
-/* Apply styles for the section title */
-font-weight: 700;
-font-size: 26px;
-color: #173b6c;
-text-align: center;
-margin-bottom: 100px;
-position: relative;
-margin-top: 50px;
-}
-
-.internship-section .timeline {
-position: relative;
-width: 100%;
-}
-@media (max-width: 1934.98px) {
-.internship-section .timeline .timeline-item {
+  padding: 10px 0;
+  margin:0 0 10px;
+  
+  }
+  .internship-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+  
+  }
+  .internship-section {
+  display: center;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  width:100%
+  }
+  .internship-section .education-item h2 {
+  /* Apply styles for the section title */
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 100px;
+  }
+  
+  .internship-section .timeline {
+  position: relative;
+  width: 100%;
+  }
+  @media (max-width: 1934.98px) {
+  .internship-section .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  }
+  
+  .internship-section .timeline .timeline-item {
   position: relative;
   background: inherit;
-  width: 100%;
+  width: 50%;
   margin-bottom: 30px;
-}
-}
-
-.internship-section .timeline .timeline-item {
-position: relative;
-background: inherit;
-width: 50%;
-margin-bottom: 30px;
-}
-
-.internship-section .timeline .timeline-item.center {
-left: 30%;
-padding-right: 60px;
-}
-
-.internship-section .timeline .timeline-item.right {
-left: 100px;
-}
-
-.internship-section .timeline .timeline-text {
-padding: 30px;
-background: #ffffff;
-position: relative;
-border-right: 5px solid #dddddd;
-box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
-}
-
-.internship-section .timeline .timeline-item.right .timeline-text {
-border-right: none;
-border-left: 5px solid #dddddd;
-}
-
-.internship-section .timeline .timeline-text h2 {
-margin: 0 0 5px 0;
-font-size: 22px;
-font-weight: 600;
-text-align: center;
-color: hsl(0, 0%, 0%);
-}
-
-.internship-section .timeline .timeline-text h4 {
-margin: 0 0 10px 0;
-font-size: 16px;
-font-style: italic;
-font-weight: 400;
-text-align: center;
-}
-
-.internship-section .timeline .timeline-text p {
-margin: 0;
-font-size: 17px;
-text-align: center;
-
-}
-
+  }
+  .internship-section .timeline .timeline-text {
+    padding: 30px;
+    background: #ffffff;
+    position: relative;
+    border-right: 50px solid #dddddd;
+    box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
+  }
+  .internship-section .timeline .timeline-item.center {
+  left: 25%;
+  padding-right: 0px;
+  }
+  
+  .internship-section .timeline .timeline-item.right {
+  left: 50px;
+  }
+  
+  .internship-section .timeline .timeline-text {
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
+  }
+  
+  
+  
+  .internship-section .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  }
+  
+  .internship-section .timeline .timeline-text h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  }
+  
+  .internship-section .timeline .timeline-text p {
+  margin: 0;
+  font-size: 17px;
+  text-align: center;
+  
+  }
 /*-------------------------------------
     4.  Projects
 --------------------------------------*/
@@ -806,6 +797,106 @@ text-align: center;
 position: relative;
 margin-top: 96px;
 }
+
+/*-------------------------------------
+    5.  Acheivements
+--------------------------------------*/
+#experience1 {
+  padding: 10px 0;
+  margin:0 0 20px;
+  
+  }
+  .internship-container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0vw;
+  
+  }
+  .internship-section1 {
+  display: center;
+  justify-content: center; 
+  align-items: center;
+  margin: 20px;
+  height: 70vh; 
+  width:100%
+  
+  }
+  .internship-section1 .education-item h2 {
+  /* Apply styles for the section title */
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 10px;
+  }
+  
+  .internship-section1 .timeline {
+  position: relative;
+  width: 100%;
+  }
+  @media (max-width: 1934.98px) {
+  .internship-section1 .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 30px;
+
+  }
+  }
+  
+  .internship-section1 .timeline .timeline-item {
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: 30px;
+  }
+  .internship-section1 .timeline .timeline-text {
+    padding: 30px;
+    background: #ffffff;
+    position: relative;
+    border-right: 50px solid #dddddd;
+    box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
+  }
+  .internship-section1 .timeline .timeline-item.center {
+  left: 25%;
+  padding-right: 0px;
+  }
+  
+  .internship-section1 .timeline .timeline-item.right {
+  left: 50px;
+  }
+  
+  .internship-section1 .timeline .timeline-text {
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
+  text-align: center;
+  }
+  
+  
+  
+  .internship-section1 .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  }
+  
+  .internship-section .timeline .timeline-text h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  }
+  
 /* Media query for mobile devices */
 @media only screen and (min-width: 768px) {
     /* Adjust styles for screens larger than 768px */
@@ -821,6 +912,22 @@ margin-top: 96px;
 /* Media query for screens smaller than 768px (mobile devices) */
 @media only screen and (max-width: 767.98px) {
     /* Adjustments for smaller screens */
+    .btn-solid-lg {
+      background-color: hsl(32, 100%, 50%);
+      color: #fff;
+      padding: 7px 8px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 12px;
+  }
+  .btn-outline-lg {
+    background-color: #007bff;
+    color: #fff;
+    padding: 6px 4px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+  }
     .firstSection {
         margin: 50px 0; /* Reduced margin */
         padding: 0 10px; /* Adjusted padding */
@@ -896,6 +1003,15 @@ margin-top: 96px;
 }
 /* Adjustments for Internship Experience section on mobile devices */
 @media only screen and (max-width: 767.98px) {
+  .internship-section .education-item h2 {
+      font-size: 23px;
+  }
+  .timeline-date{
+     font-size: 10px;
+     font-weight: 700;
+  }
+}
+@media only screen and (max-width: 767.98px) {
     .internship-section {
         text-align: center; /* Center-align content */
     }
@@ -908,7 +1024,7 @@ margin-top: 96px;
 
     .internship-section .timeline .timeline-item {
         width: 100%; /* Adjusted width for full width */
-        margin-bottom: 20px; /* Reduced margin */
+        margin-bottom: 50px; /* Reduced margin */
         text-align: center; /* Center-align text */
         left: auto; /* Reset left alignment */
     }
@@ -923,6 +1039,7 @@ margin-top: 96px;
 
     .internship-section .timeline .timeline-text h2 {
         font-size: 10px; /* Adjusted font size */
+        font-weight: 800;
     }
 
     .internship-section .timeline .timeline-text h4 {
@@ -930,15 +1047,42 @@ margin-top: 96px;
     }
 
     .internship-section .timeline .timeline-text p {
-        font-size: 7px; /* Adjusted font size */
+        font-size: 9px; /* Adjusted font size */
+        font-weight: 600;
     }
 }
 @media only screen and (max-width: 767.98px) {
     .internship-section .timeline-text {
         text-align: center; /* Center-align text within the timeline-text div */
-        margin-right: 200px;
+        margin-right: 170px;
         margin-left: 0px;
     }
+    .internship-section1 .education-item h2 {
+      font-weight: 700;
+      font-size: 26px;
+      color: #173b6c;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 10px;
+  }
+  .education-item h2 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    margin-top: 0px;
+}
+#projects h2 {
+  margin-top: 0px;
+}
+section {
+    padding: 0px 0;
+    overflow: hidden;
+}
 }
 </style>
 </header>
@@ -1232,8 +1376,8 @@ margin-top: 96px;
 
 
   <!-- Acheviements Section -->
-<section id="experience1" class="internship-section" style="position: center;">
-  <div class="container">
+<section id="experience1" class="internship-section1" style="position: center;">
+  <div class="container1">
     <div class="education-item" data-wow-delay="0.1s";>
       <h2>ACHEVIEMENTS</h2>
     </div>

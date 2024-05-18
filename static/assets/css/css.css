@@ -807,3 +807,103 @@ margin-top: 96px;
     }
 }
 
+/*-------------------------------------
+    3.  Internship Experience
+--------------------------------------*/
+#experience {
+  padding: 10px 0;
+  margin:0 0 10px;
+  
+  }
+  .internship-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+  
+  }
+  .internship-section {
+  display: center;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  width:100%
+  }
+  .internship-section .education-item h2 {
+  /* Apply styles for the section title */
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 0px;
+  }
+  
+  .internship-section .timeline {
+  position: relative;
+  width: 100%;
+  }
+  @media (max-width: 1934.98px) {
+  .internship-section .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  }
+  
+  .internship-section .timeline .timeline-item {
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: 30px;
+  }
+  .internship-section .timeline .timeline-text {
+    padding: 30px;
+    background: #ffffff;
+    position: relative;
+    border-right: 50px solid #dddddd;
+    box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
+  }
+  .internship-section .timeline .timeline-item.center {
+  left: 25%;
+  padding-right: 0px;
+  }
+  
+  .internship-section .timeline .timeline-item.right {
+  left: 50px;
+  }
+  
+  .internship-section .timeline .timeline-text {
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
+  }
+  
+  
+  
+  .internship-section .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  }
+  
+  .internship-section .timeline .timeline-text h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  }
+  
+  .internship-section .timeline .timeline-text p {
+  margin: 0;
+  font-size: 17px;
+  text-align: center;
+  
+  }
