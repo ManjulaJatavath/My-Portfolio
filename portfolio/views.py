@@ -34,9 +34,6 @@ def contact(request):
         phone = request.POST.get('num')
         message = request.POST.get('message')
 
-        contact = Contact.objects.create(name=name, email=email, phone=phone, message=message)
-        contact.save()
-
         messages.success(request, 'Your message has been successfully submitted.')
         return redirect('home')
 
