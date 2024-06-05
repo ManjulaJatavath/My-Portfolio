@@ -15,20 +15,173 @@ Manjula Portfolio
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 <nav id="navbarr" class="navbarr" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color:black;text-align:center; font-size:large;overflow: hidden; margin:0px 0px;padding: 40px 18px;border: 10px;">
   <div class="left" style="font-size: 1.5rem;color: hsl(32deg 88.68% 54.1%);">Manjula's Portfolio</div>
   <div class="right" style="margin:5px;display: inline">
       <ul class="nav-links"style="padding: 40px 20px; display: flex; margin: 130px;width: 100%;">        
-          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#education" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px;" onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor='';">Education</a></li>
-          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#skills" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px; " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Skills</a></li>
-          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#projects" style=" display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px  " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Projects</a></li>
-          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#experience" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px  " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Experience</a></li> 
-          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#experience1" style=" display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Acheviements</a></li> 
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#education" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px; margin-left:210px" onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor='';">Education</a></li>
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#skills" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px; margin-left:10px " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Skills</a></li>
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#projects" style=" display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px; margin-left:10px " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Projects</a></li>
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#experience" style="display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px ; margin-left:10px;" onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Experience</a></li> 
+          <li class="nav-item" style="list-style: none; margin: 10 20px;"><a href="#experience1" style=" display: block;color: white; text-align: center; text-decoration: none;transition: background-color 0.3s ease;border-radius: 10px;padding: 10px; margin-left:0px " onmouseover="this.style.backgroundColor='#007bff'" onmouseout="this.style.backgroundColor=''">Acheviements</a></li> 
+          <li class="nav-item" style="list-style: none; margin: 10 20px;">
+            <button id="darkModeToggle" style="background-color: black; color: white; border: none; padding: 10px; border-radius: 10px; cursor: pointer; margin-left: 10px;">
+                <i class="fas fa-moon" id="darkModeIcon"></i>
+            </button>
+        </li>
       </ul>
   </div>
 </nav>
+<script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const darkModeIcon = document.getElementById('darkModeIcon');
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      darkModeIcon.classList.remove('fa-moon');
+      darkModeIcon.classList.add('fa-sun');
+    } else {
+      darkModeIcon.classList.remove('fa-sun');
+      darkModeIcon.classList.add('fa-moon');
+    }
+  });
+</script>
 <div>
 <style>
+/* Light mode styles for the first section */
+.firstSection {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.leftSection h4 {
+  color: #007bff;
+}
+
+.leftSection h1 .color {
+  color: #007bff;
+}
+
+.leftSection p {
+  color: white;
+}
+
+.leftSection .typed {
+  color: inherit;
+}
+
+/* Dark mode styles */
+body.dark-mode .firstSection {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .leftSection h4 {
+  color: #007bff;
+}
+
+body.dark-mode .leftSection h1 .color {
+  color: #007bff;
+}
+
+body.dark-mode .leftSection p {
+  color: #ffffff;
+}
+
+body.dark-mode .leftSection .typed {
+  color: inherit;
+}
+
+body.dark-mode .btn-solid-lg,
+body.dark-mode .btn-outline-lg {
+  color: #ffffff;
+}
+
+
+body.dark-mode .rightSection img {
+  filter: brightness(0.9);
+}
+
+
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .navbarr {
+    background-color: black;
+  }
+
+  .nav-item a {
+    color: white;
+  }
+
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .dark-mode a {
+    color: #ffffff;
+  }
+
+  .dark-mode .navbarr {
+    background-color: #333333;
+  }
+
+  .dark-mode .nav-item a:hover {
+    background-color: #0056b3;
+  }
+
+  /* Ensure p tags are styled correctly */
+  .dark-mode p {
+    color: black;
+  }
+  .dark-mode h4 {
+    color: black;
+  }
+  .dark-mode #projects {
+    color: black;
+  }
+
+
+
+  .projects {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .project-title span {
+    background: linear-gradient(to bottom, hsl(311, 98%, 35%) 40%, hsl(100, 55%, 32%) 60%, hsl(31, 88%, 44%));
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode .projects {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+
+  
+  body.dark-mode .projects .project-container {
+    border-color: #333333;
+  }
+  
+  body.dark-mode .projects{
+    color: #007bff;
+  }
+  
+  body.dark-mode .projects .project-link:hover {
+    color: #0056b3;
+  }
+  
+  body.dark-mode .projects .project-pic {
+    filter: brightness(0.9);
+  }
+
   @media only screen and (max-width: 768px) {
       .nav {
           flex-direction: column;
@@ -69,6 +222,20 @@ Manjula Portfolio
       z-index: 1000;
       top: 0px;
     }
+    @media screen and (max-width: 320px) {
+      .btn-solid-lg {
+        background-color: hsl(32, 100%, 50%);
+        color: #fff;
+        padding: 15px 10px;
+        border-radius: 5px;
+    }
+    .btn-outline-lg {
+      background-color: #007bff;
+      color: #fff;
+      padding: 15px 10px;
+      border-radius: 5px;
+  }
+    }
     @media only screen and (max-width: 768px) {
       .right {
           margin-top: 0px 0px;
@@ -78,6 +245,111 @@ Manjula Portfolio
         margin-top: 0px;
       }
   }
+  .projects {
+    background-color:var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+  }
+  
+  .project-pic {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .project-container p {
+    padding: 0.4rem;
+    font-size: smaller;
+  }
+  
+  .project-title {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .project-details {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+  }
+  .projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .project-container {
+    text-align: center;
+    width: 21.rem;
+    padding: 1rem;
+  }
+  .project-container p {
+    padding: 0.4rem;
+  }
+  
+  .project-title {
+    margin-bottom: var(--bottom-margin);
+    color: #b30773;
+  }
+  a.project-link{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #6b90e6;
+  }
+  
+  .project-details {
+    margin-bottom: var(--bottom-margin);
+  }
+  :root {
+    --font-family: "Roboto", sans-serf;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }
+  #projects h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #173b6c;
+    text-align: center;
+    position: relative;
+    margin-top: 96px;
+}
+  .projects .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+@media (max-width: 1934.98px) {
+  .projects .projects-container {
+      display: grid !important; 
+  }
+}
+@media (max-width: 669.98px) {
+  .projects .projects-container {
+      display: inline !important;
+  }
+}
+
 </style>
 </header>
 <!-- ======= Main Section ======= -->
@@ -92,8 +364,8 @@ Manjula Portfolio
       <a class="btn-outline-lg page-scroll" href="/contact/"><i class="fas fa-envelope"></i> Contact Me</a>
       <a class="btn-solid-lg page-scroll" href="static\assets\resume\Manjula Resume.docx" download>
         <i class="fas fa-file-alt"></i> Download CV
-    </a>
-  </div>
+      </a>
+    </div>
     </div>
     <div class="rightSection"  style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
       <img src="{% static 'assets/img/profile-img1.jpg' %}" alt="" class="img-fluid rounded-circle">
@@ -305,7 +577,7 @@ Manjula Portfolio
   <!--skills end -->
 
 <!-- Projects Section -->
-<section id="projects" class="projects-section">
+<!-- <section id="projects" class="projects-section">
   <h2 class="sub-title" style="color: hwb(215 7% 67%); position: relative;font-size: 2.5rem;font-weight: 700;">MY 
       <span style="background: linear-gradient(to bottom, hsl(311, 98%, 35%) 40%, hsl(100, 55%, 32%) 60%, hsl(31, 88%, 44%));background-clip: text;color: transparent;">PROJECTS</span>
   </h2>
@@ -362,7 +634,129 @@ Manjula Portfolio
       </div>
   </div>
 </div>
+<hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+<div class="project-list">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: hwb(319 8% 20%);">4. TO-DO APP</h4>
+          <a href="https://manjulajatavath.github.io/TO-DO-App/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p>1. The Manju Study Planner is a web application designed to help users create and manage their study schedules. </p>
+      <p>2. It features user registration, timetable setup, and display of saved data...</p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/to-do app.png' %}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="manjulajatavath.github.io/TO-DO-App/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
 </div>
+<hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+<div class="project-list">
+  <div class="col1">
+      <div class="title">
+          <h4 style="color: #f3b008;">5. VENDER-MANAGEMENT-SYSTEM</h4>
+          <a href="https://github.com/ManjulaJatavath/Vendor-Management-system" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <p>1. The Vendor Management System streamlines managing and coordinating with vendors, featuring registration, tracking, and performance evaluation functionalities.. </p>
+  </div>
+  <div class="col2">
+      <img src="{% static 'assets/img/Vendor_managment.png'%}" alt="No-img" class="image1">
+      <div class="layer">
+          <h4>Click on the below link to see Overview of the project.</h4>
+          <a href="https://github.com/ManjulaJatavath/Vendor-Management-system" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+  </div>
+</div>
+<hr style="border-color: #1e6cd2; border-radius: 10px; height: 1px;">
+</div>
+</section> -->
+
+<!--  -->
+<section class="projects" id="projects">
+  <h2 class="project-title"   style="font-size: 2.5rem;font-weight: 700;">MY <span style="background:linear-gradient(to bottom, hsl(311, 98%, 35%) 40%, hsl(100, 55%, 32%) 60%, hsl(31, 88%, 44%)); background-clip: text;color:transparent ;">PROJECTS</span></h2>
+  <div class="projects-container">
+    <div class="project-container project-card">
+      <h3 class="project-title">SKIN-SAVIOUR</h3>
+      <img
+        src="static\assets\img\Skin-Saviour.png"
+        alt="expense-tracker"
+        loading="lazy"
+        class="project-pic"
+      />
+      <p class="project-details">
+        It's a website which offers an innovative platform where users embark on a discovery of their skin's unique needs through an engaging quiz experience.
+      </p>
+      <a href="https://skin-saviour.netlify.app" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <h3 class="project-title"> MR.RESTAURANT</h3>
+      <img
+        src="static\assets\img\restaurant.png"
+        alt="netflic-clone"
+        loading="lazy"
+        class="project-pic"
+      />
+      <p class="project-details">
+        Designed to showcase MR Restaurant's offerings and facilitate customer engagement through a user-friendly interface.
+      </p>
+      <a href="https://restaurant-website-psi-ten.vercel.app/" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <h3 class="project-title">EMP MANAGEMENT</h3>
+      <img
+        src="static\assets\img\emp-management.png"
+        alt="greeny-earth"
+        loading="lazy"
+        class="project-pic"
+      />
+      <p class="project-details">
+        Engineered core functionalities for managing employee records, enabling CRUD operations with pre-authentication employee filtering.
+      </p>
+      <a href="https://office-employee-management-system-8kq1.onrender.com/" target="_blank" class="project-link">Check it Out</a>
+    </div>
+
+    <div class="project-container project-card">
+      <h3 class="project-title">VENDOR-MANAGEMENT</h3>
+      <img
+        src="static\assets\img\Vendor_managment.png"
+        alt="greeny-earth"
+        loading="lazy"
+        class="project-pic"
+      />
+      <p class="project-details">
+        The Vendor Management System streamlines managing and coordinating with vendors, tracking, and performance evaluation functionalities..
+      </p>
+      <a href="https://github.com/ManjulaJatavath/Vendor-Management-system" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <h3 class="project-title">STUDENT MANAGEMENT</h3>
+      <img
+        src="static\assets\img\student.png"
+        alt="greeny-earth"
+        loading="lazy"
+        class="project-pic"
+      />
+      <p class="project-details">
+        Implemented Django-based CRUD operations with Django, Python, HTML and CSS for data manipulation.
+      </p>
+      <a href="https://github.com/ManjulaJatavath/Django-Student-management-project" target="_blank" class="project-link">Check it Out</a>
+    </div>
+    <div class="project-container project-card">
+      <h3 class="project-title">TO-DO APP</h3>
+      <img
+        src="static\assets\img\to-do app.png"
+        alt="greeny-earth"
+        loading="lazy"
+        class="project-pic"
+      />
+      <p class="project-details">
+        The Manju Study Planner is a web application designed to help users create and manage their study schedules. 
+      </p>
+      <a href="https://manjulajatavath.github.io/TO-DO-App/" target="_blank" class="project-link">Check it Out</a>
+    </div>
+  </div>
 </section>
 
 <!-- Internship Experience Section -->

@@ -469,6 +469,7 @@ font-size: 16px;
     font-size: 15px;
   }
 }
+
 /*-------------------------------------
     2.  Skills
 --------------------------------------*/
@@ -682,18 +683,6 @@ margin-right: 8px;
         margin-bottom: 30px;
     }
   }
-  @media (max-width: 1934.98px) {
-    .internship-section .timeline .timeline-item {
-        position: relative;
-        background: inherit;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-  }
-  @media (min-width: 868px) and (max-width: 991.98px) {
-  }
-
-
 
   @media (max-width: 1934.98px) {
   .internship-section .timeline .timeline-item {
@@ -1044,6 +1033,7 @@ margin-top: 96px;
       text-decoration: none;
       font-size: 10px;
   }
+
   .btn-outline-lg {
     background-color: #007bff;
     color: #fff;
@@ -1278,6 +1268,5 @@ section {
       border-radius: 0px;
   }
 }
-@media only screen and (max-width: 375px) and (max-height: 667px) {
-  
-}
+
+
