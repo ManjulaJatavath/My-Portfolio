@@ -1,83 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-internship-section .timeline .timeline-item.center {
-  left: 10%;
-  padding-right: 60px;
-}
-
-@media (max-width: 1934.98px) {
-  .internship-section .timeline .timeline-item.center {
-      left: 20%;
-      padding-right: 70px;
-  }
-}
-.internship-section .timeline .timeline-item {
-  position: relative;
-  background: inherit;
-  width: 100%;
-  margin-bottom: 30px;
-}
-@media (max-width: 1934.98px) {
-  .internship-section .timeline .timeline-item {
-      position: relative;
-      background: inherit;
-      width: 100%;
-      margin-bottom: 30px;
-  }
-}
-@media (max-width: 1934.98px) {
-  .internship-section .timeline .timeline-item {
-      position: relative;
-      background: inherit;
-      width: 100%;
-      margin-bottom: 30px;
-  }
-}
-@media (min-width: 868px) and (max-width: 991.98px) {
-}
-
-
-@media only screen and (max-width: 767.98px) {
-  .firstSection .leftSection, .firstSection .rightSection {
-      margin: 50px 0;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .firstSection {
-      margin: 100px 0;
-      padding: 0 10px;
-  }
-}
-@media (max-width: 767.98px) {
-  .firstSection {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .firstSection .leftSection,
-  .firstSection .rightSection {
-      width: 100%;
-      margin: 20px 0px;
-  }
-  @media only screen and (max-width: 767.98px) {
-    .leftSection {
-        margin: 45px 0;
-    }
-}
-}
 .left{
   margin-right: 10px;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 .firstSection {
   display: flex;
@@ -85,29 +9,61 @@ internship-section .timeline .timeline-item.center {
   align-items: center;
   background-color: white; 
   color: #040404;
-  margin: 100px 0;
-  display: center;
+  margin: -10 0;
   margin-bottom: auto;
   
 }
-*, ::after, ::before {
-  box-sizing: border-box;
-}
+
+
 .firstSection div{
-  width: 40%;              
+  width: 35%;
+  margin: 4px 0;
+  padding: 30px;
+  background: hwb(0 6% 94%);
+  position: relative;
+  border-right:  5px solid hwb(308 7% 36%);
+  box-shadow: 2px 2px 6px 1px var(--firstsection-shadowcolor);
+  border-radius: 30px;              
 }
 
 .leftSection{
 font-size: 2.5rem;
-margin: 45px 0;  
-}
+margin: 45px 0; 
+margin: 45px 0;
+padding: 30px;
+background: hwb(134 6% 9%);
+position: relative;
+border-right: 5px solid #dddddd;
+box-shadow: 2px 2px 6px 1px var(--internship-shadowcolor);
+border-radius: 30px;
+} 
 .rightSection{
 width: 100%;
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 80%;
+    /* box-shadow: 1px 1px 6px 2px black; */
+    padding: 13rem 8rem;
+    margin-left: 0%;
+    background-color: rgb(54, 49, 49);
+    border-top: 12px solid var(--border-color);
+    border-bottom: 12px solid var(--border-color);
+    border-top-left-radius: 50% 90%;
+    border-bottom-right-radius: 40% 70%;
+    color: white;
+    visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;
 }
 .rightSection img {
 background-color: hsl(32, 100%, 50%);
 width: 100%;
-} /* height lenth */      
+} /* height lenth */
+      
 .btn-outline-lg {
 
 background-color: #007bff;
@@ -136,6 +92,7 @@ color: #007bff;
 }
 .typed {
 color: hsl(32, 100%, 50%);
+font-size: 22px;
 }
 p{
 font-size: 25px;
@@ -156,20 +113,99 @@ section {
   padding: 90px 0;
   overflow: hidden;
 }
+#about-content{
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 58%;
+    /* box-shadow: 1px 1px 6px 2px black; */
+    padding: 10rem 9rem;
+    margin-left: -0%;
+    background-color: #181816;
+    border-top: 12px solid var(--border-color);
+    border-bottom: 12px solid var(--border-color);
+    border-top-left-radius: 65% 30%;
+    border-bottom-right-radius: 50% 40%;
+    color: white;
+}
+@media (max-width: 1030px) {
+  .about-content {
+      padding: 0px;
+      width: 100%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+#about-content {
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  width: 75%;
+  box-shadow: 5px 5px 6px 5px black;
+  background-color: #181816;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  border-top-left-radius: 1% 1%;
+  border-bottom-right-radius: 1% 1%;
+  color: white;
+  border-width: initial;
+  margin-top: 30px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  padding: 13px;
+}
+}
+@media only screen and (max-width: 767.98px) {
+  .firstSection .leftSection, .firstSection .rightSection {
+      margin: 50px 0;
+  }
+}
+
+
+@media only screen and (max-width: 767.98px) {
+  .firstSection {
+      margin: 100px 0;
+      padding: 0 10px;
+  }
+}
+@media (max-width: 767.98px) {
+  .firstSection {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .firstSection .leftSection,
+  .firstSection .rightSection {
+      width: 70%;
+      margin: 20px 0px;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+      padding: 2rem 3%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .firstSection {
+      margin: 100px 0;
+  }
+}
 /*-------------------------------------
     1.  Education
 --------------------------------------*/
 
 .education-item h2{
 font-weight: 700;
-font-size: 26px;
+font-size: 2.5rem;
 color: #173b6c;
 text-align: center;
 margin-bottom: 30px;
 position: relative;
-margin-top: 30px;
-
+margin-top: 56px;
+font-weight: 700;
+margin-right: 10px;
 }
+
 .education {
 position: relative;
 padding: 40px 0 15px 0;
@@ -186,11 +222,10 @@ color: #007bff;
 }
 .education-item h2::after {
 content: '';
-position: absolute;
 bottom: -2px;
 left: 50%;
 transform: translateX(-50%);
-width: 60px; 
+width: 100px; 
 height: 2px;
 background-color: #1594c7; 
 }
@@ -284,13 +319,35 @@ right: calc(100% + 55px);
 }
 
 .education .timeline .timeline-text {
-padding: 30px;
-background: #ffffff;
-position: relative;
-border-right: 5px solid #dddddd;
-box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+  flex: 1 1 30rem;
+  background: var(--bg-color);
+  padding: 3rem 2rem 4rem;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  box-shadow: 0 .1rem .5rem var(--shadow-color);
+  text-align: center;
+  border-top: .6rem solid var(--about-border-color);
+  border-bottom: .6rem solid var(--about-border-color);
+  border-left: 1px dotted var(--border-color);
+  border-right: 1px dotted var(--border-color);
+  transition: .5s ease;
+  height: 160px;
 }
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #333;
+  --main-color: linear-gradient(to bottom, rgb(194, 6, 109) 40%, rgb(223, 19, 203) 60%, rgb(211, 13, 165));
+  --main-color1: linear-gradient(to bottom, rgb(235, 55, 154) 40%, rgb(169, 36, 156) );
+  --white-color: #fdfdfd;
+  --shadow-color: rgba(0, 0, 0, .2);
+  --border-color: #c20696;
+  --about-border-color:rgb(194, 5, 106);
+  --skills-shadowcolor: rgb(227, 28, 64);
+  --skills-bordercolor: white;
+  --internship-shadowcolor: rgb(194, 6, 125);
+  --firstsection-shadowcolor:#f60aa3;
 
+}
 .education .timeline .timeline-item.right .timeline-text {
 border-right: none;
 border-left: 5px solid #dddddd;
@@ -300,6 +357,8 @@ border-left: 5px solid #dddddd;
 margin: 0 0 5px 0;
 font-size: 22px;
 font-weight: 600;
+margin-top: -30px;
+margin-left: -100px;
 }
 
 .education .timeline .timeline-text h4 {
@@ -313,7 +372,6 @@ font-weight: 400;
 margin: 0;
 font-size: 16px;
 }
-
 @media (max-width: 767.98px) {
 .education .timeline::after {
   left: 8px;
@@ -360,7 +418,57 @@ font-size: 16px;
   border-left: 5px solid #dddddd;
 }
 }
+.responsive-img {
+  display: block;
+  max-width: 110px;
+  height: auto;
+  top: -30px;
+  position: relative;
+}
+@media only screen and (max-width: 767.98px) {
+  .responsive-img{
+    display: block;
+    max-width: 80px; /* Adjust the size for mobile devices */
+    top: -0px; /* Reset the position */
+    position: relative;
+    margin: 0 auto; /* Center the image on smaller screens */
+  }
+  .education .timeline .timeline-item:nth-child(2) .responsive-img {
+    max-height: 80px;
+    image-rendering: auto; 
+    margin-top: 40px;/* Adjust the size for the second image on mobile */
+  }
+  .education .timeline .timeline-item:nth-child(3) .responsive-img { 
+    margin-top: 30px;/* Adjust the size for the second image on mobile */
+  }
 
+  .education .timeline .timeline-item.left div[style*="float: right"],
+  .education .timeline .timeline-item.right div[style*="float: right"] {
+    float: none;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .education .timeline .timeline-item:nth-child(2) .timeline-text h2 {
+    font-size: 15px;
+  }
+  .education .timeline .timeline-item:nth-child(1) .timeline-text h2 {
+    font-size: 15px;
+  }
+  .education .timeline .timeline-item:nth-child(3) .timeline-text h2 {
+    font-size: 15px;
+  }
+
+}
+.education .timeline .timeline-item:nth-child(3) .timeline-text h2 {
+  font-size: 22px;
+}
+@media only screen and (max-width: 767.98px) {
+  .education .timeline .timeline-item:nth-child(3) .timeline-text h2 {
+    font-size: 15px;
+  }
+}
 
 /*-------------------------------------
     2.  Skills
@@ -368,28 +476,33 @@ font-size: 16px;
 .container, .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 40px;
+  padding-top: 70px;
 }
 .skill-content{
 padding-bottom: 30px;
 }
-.skill-section{
-height: 40vh;
+#skills.skils{
+  padding-top: 10px;
 }
-.single-skill-content{padding-top: 0px;}
+.skill-section{
+height: 30vh;
+}
+.single-skill-content{padding-top: 20px;}
+#skills.skills{
+  padding: 0px 0;
+  overflow: hidden;
 
+}
 .section-heading h2 {
-font-size: 24px;
+font-size: 30px;
 font-weight: 600;
 text-transform: uppercase;
 padding-bottom: 10px;
 border-bottom: 1px solid #e5ebf2;
-text-align: center;
-margin-top: 40px;
+margin-top: 120px;
 }
 .section-heading h2 {
 font-weight: 700;
-font-size: 26px;
 color: #173b6c;
 text-align: center;
 position: relative;
@@ -516,99 +629,127 @@ margin-right: 8px;
     3.  Internship Experience
 --------------------------------------*/
 #experience {
-padding: 10px 0;
-margin:0 0 10px;
+  padding: 10px 0;
+  margin:0 0 10px;
+  
+  }
+  .internship-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+  
+  }
+  .internship-section {
+  display: center;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  width:100%
+  }
+  .internship-section .education-item h2 {
+  /* Apply styles for the section title */
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  }
+  
+  .internship-section .timeline {
+  position: relative;
+  width: 100%;
+  }
+  @media (max-width: 1934.98px) {
+    .internship-section .timeline .timeline-item.center {
+        left: 20%;
+        padding-right: 70px;
+    }
+  }
+  .internship-section .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 1934.98px) {
+    .internship-section .timeline .timeline-item {
+        position: relative;
+        background: inherit;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+  }
 
-}
-.internship-container{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vw;
-
-}
-.internship-section {
-display: center;
-justify-content: center; 
-align-items: center; 
-height: 100vh; 
-width:100%
-}
-.internship-section .education-item h2 {
-/* Apply styles for the section title */
-font-weight: 700;
-font-size: 26px;
-color: #173b6c;
-text-align: center;
-margin-bottom: 100px;
-position: relative;
-margin-top: 50px;
-}
-
-.internship-section .timeline {
-position: relative;
-width: 100%;
-}
-@media (max-width: 1934.98px) {
-.internship-section .timeline .timeline-item {
+  @media (max-width: 1934.98px) {
+  .internship-section .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 30px;
+    height: 100px;
+  }
+  }
+  
+  .internship-section .timeline .timeline-item {
   position: relative;
   background: inherit;
-  width: 100%;
+  width: 50%;
   margin-bottom: 30px;
-}
-}
-
-.internship-section .timeline .timeline-item {
-position: relative;
-background: inherit;
-width: 50%;
-margin-bottom: 30px;
-}
-
-.internship-section .timeline .timeline-item.center {
-left: 30%;
-padding-right: 60px;
-}
-
-.internship-section .timeline .timeline-item.right {
-left: 100px;
-}
-
-.internship-section .timeline .timeline-text {
-padding: 30px;
-background: #ffffff;
-position: relative;
-border-right: 5px solid #dddddd;
-box-shadow: 0 0 60px hwb(203 49% 24% / 0.875);
-}
-
-.internship-section .timeline .timeline-item.right .timeline-text {
-border-right: none;
-border-left: 5px solid #dddddd;
-}
-
-.internship-section .timeline .timeline-text h2 {
-margin: 0 0 5px 0;
-font-size: 22px;
-font-weight: 600;
-text-align: center;
-color: hsl(0, 0%, 0%);
-}
-
-.internship-section .timeline .timeline-text h4 {
-margin: 0 0 10px 0;
-font-size: 16px;
-font-style: italic;
-font-weight: 400;
-text-align: center;
-}
-
-.internship-section .timeline .timeline-text p {
-margin: 0;
-font-size: 17px;
-text-align: center;
-
-}
+  }
+  .internship-section .timeline .timeline-text {
+    padding: 11px;
+    background: #ffffff;
+    position: relative;
+    border-right: 50px solid #dddddd;
+    box-shadow: 0 0 60px hwb(203 49% 24% / 0.875)
+  }
+  .internship-section .timeline .timeline-item.center {
+  left: -2%;
+  padding-right: 0px;
+  }
+  
+  .internship-section .timeline .timeline-item.right {
+  left: 50px;
+  }
+  
+  .internship-section .timeline .timeline-text {
+  box-shadow: 2px 2px 6px 1px var(--skills-shadowcolor);
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 2px 2px 6px 1px var(--internship-shadowcolor);
+  border-radius: 30px;
+  }
+  
+  
+  
+  .internship-section .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  }
+  
+  .internship-section .timeline .timeline-text h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  }
+  
+  .internship-section .timeline .timeline-text p {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+  
+  }
 
 /*-------------------------------------
     4.  Projects
@@ -720,6 +861,147 @@ text-align: center;
 position: relative;
 margin-top: 96px;
 }
+
+/*-------------------------------------
+    5.  Acheivements
+--------------------------------------*/
+#experience1 {
+  padding: 10px 0;
+  margin:0 0 20px;
+  
+  }
+  .internship-container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0vw;
+  
+  }
+  .internship-section1 {
+  display: center;
+  justify-content: center; 
+  align-items: center;
+  margin: 20px;
+  height: 70vh; 
+  width:100%
+  
+  }
+  .internship-section1 .education-item h2 {
+  /* Apply styles for the section title */
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  }
+  @media (max-width: 767.98px) {
+    .internship-section1 {
+        display: center;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        height: 35vh;
+        width: 100%;
+    }
+}
+  .internship-section1 .timeline {
+  position: relative;
+  width: 100%;
+  }
+  @media (max-width: 1934.98px) {
+  .internship-section1 .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 30px;
+
+  }
+
+  .internship-section {
+    display: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+  @media (max-width: 767.98px) {
+    .internship-section {
+        display: center;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        width: 100%;
+    }
+}
+.internship-section1 {
+  display: center;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  height: 85vh;
+  width: 100%;
+}
+.container, .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 2px;
+}
+  }
+  
+  .internship-section1 .timeline .timeline-item {
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: 30px;
+  }
+  .internship-section1 .timeline .timeline-item.center {
+  left: 25%;
+  padding-right: 0px;
+  }
+  
+  .internship-section1 .timeline .timeline-item.right {
+  left: 50px;
+  }
+  
+  .internship-section1 .timeline .timeline-text {
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 2px 2px 6px 1px var(--internship-shadowcolor);
+  border-radius: 30px;
+  text-align: center;
+  }
+  
+  .internship-section .timeline .timeline-text {
+
+    padding: 40px;
+    background: #ffffff;
+    position: relative;
+    border-right: 5px solid #dddddd;
+    box-shadow: 2px 2px 6px 1px var(--internship-shadowcolor);
+    border-radius: 30px;
+}
+  
+  .internship-section1 .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  }
+  
+  .internship-section .timeline .timeline-text h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  }
+  
 /* Media query for mobile devices */
 @media only screen and (min-width: 768px) {
     /* Adjust styles for screens larger than 768px */
@@ -734,7 +1016,32 @@ margin-top: 96px;
 
 /* Media query for screens smaller than 768px (mobile devices) */
 @media only screen and (max-width: 767.98px) {
+  element.style {
+    display: block;
+    max-width: 110px;
+    height: auto;
+    top: -30px;
+    position: relative;
+}}
+@media only screen and (max-width: 767.98px) {
     /* Adjustments for smaller screens */
+    .btn-solid-lg {
+      background-color: hsl(32, 100%, 50%);
+      color: #fff;
+      padding: 10px 2px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 10px;
+  }
+
+  .btn-outline-lg {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 3px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+  }
     .firstSection {
         margin: 50px 0; /* Reduced margin */
         padding: 0 10px; /* Adjusted padding */
@@ -742,10 +1049,7 @@ margin-top: 96px;
 
     .firstSection .leftSection,
     .firstSection .rightSection {
-        margin: 50px 0; /* Reduced margin */
-    }
-    .education {
-        height: auto; /* Set height to auto for content to expand */
+      margin: 10px 0; /* Reduced margin */
     }
     .education-item h2 {
         font-size: 20px; /* Adjusted font size */
@@ -756,25 +1060,28 @@ margin-top: 96px;
         padding: 0 10px; /* Added padding */
         margin-bottom: 20px; /* Reduced margin */
     }
-
     .education .timeline .timeline-text {
-        padding: 15px; /* Adjusted padding */
+        padding: 16px;
+        margin-top: 50px; /* Adjusted padding */
     }
 
     .education .timeline .timeline-text h2 {
-        font-size: 16px; /* Adjusted font size */
+        font-size: 15px;
+        margin-left: 0px;
+        text-align: center; /* Adjusted font size */
     }
 
     .education .timeline .timeline-text h4 {
-        font-size: 12px; /* Adjusted font size */
+        font-size: 15px; /* Adjusted font size */
     }
 
     .education .timeline .timeline-text p {
-        font-size: 14px; /* Adjusted font size */
+        font-size: 14px;
+        margin: 0 auto; /* Adjusted font size */
     }
 
     .internship-section .education-item h2 {
-        font-size: 20px; /* Adjusted font size */
+        font-size: 10px; /* Adjusted font size */
     }
 
     .education .timeline::after {
@@ -789,7 +1096,8 @@ margin-top: 96px;
     .education .timeline .timeline-item.left .timeline-date,
     .education .timeline .timeline-item.right .timeline-date {
         left: 0; /* Adjusted left position */
-        text-align: center; /* Align text to the left */
+        text-align: center;
+        top: -15px; /* Align text to the left */
     }
 
     .education .timeline .timeline-item.left::before,
@@ -810,10 +1118,18 @@ margin-top: 96px;
 }
 /* Adjustments for Internship Experience section on mobile devices */
 @media only screen and (max-width: 767.98px) {
+  .internship-section .education-item h2 {
+      font-size: 23px;
+  }
+  .timeline-date{
+     font-size: 10px;
+     font-weight: 700;
+  }
+}
+@media only screen and (max-width: 767.98px) {
     .internship-section {
         text-align: center; /* Center-align content */
     }
-
     .internship-section .timeline {
         display: flex;
         flex-direction: column;
@@ -822,7 +1138,7 @@ margin-top: 96px;
 
     .internship-section .timeline .timeline-item {
         width: 100%; /* Adjusted width for full width */
-        margin-bottom: 20px; /* Reduced margin */
+        margin-bottom: 50px; /* Reduced margin */
         text-align: center; /* Center-align text */
         left: auto; /* Reset left alignment */
     }
@@ -836,7 +1152,8 @@ margin-top: 96px;
     }
 
     .internship-section .timeline .timeline-text h2 {
-        font-size: 16px; /* Adjusted font size */
+        font-size: 10px; /* Adjusted font size */
+        font-weight: 800;
     }
 
     .internship-section .timeline .timeline-text h4 {
@@ -844,14 +1161,112 @@ margin-top: 96px;
     }
 
     .internship-section .timeline .timeline-text p {
-        font-size: 14px; /* Adjusted font size */
+        font-size: 9px; /* Adjusted font size */
+        font-weight: 600;
     }
+}
+@media only screen and (max-width: 820px) {
+  .education .timeline .timeline-text {
+    height: 150px;
+}
+.education {
+  height: 180vw;
+}
+.education .timeline .timeline-text h2 {
+  text-align: center;
+  font-size: 19px;
+}
+.responsive-img {
+  top: 0px;
+}
+.education .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: -30px;
+  margin-left: 0px;
+}
+.education .timeline .timeline-item:nth-child(2) .timeline-text h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.education .timeline .timeline-item:nth-child(2) .timeline-text p {
+  margin: -10px;
+  font-size: 10px;
+}
+
+.education .timeline .timeline-item:nth-child(2) .timeline-text .responsive-img  {
+  margin-top: 25px;
+}
+.internship-section1 {
+  height: 60vh;
+  width: 100%;
+}
+.internship-section {
+  display: center;
+  justify-content: center;
+  align-items: center;
+  height: 145vh;
+  width: 100%;
+}
+.right ul li {
+  margin: 0px 1px;
+}
 }
 @media only screen and (max-width: 767.98px) {
     .internship-section .timeline-text {
         text-align: center; /* Center-align text within the timeline-text div */
-        margin-right: 200px;
+        margin-right: 45px;
         margin-left: 0px;
     }
+    .internship-section1 .education-item h2 {
+      font-weight: 700;
+      font-size: 26px;
+      color: #173b6c;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 10px;
+  }
+  .education-item h2 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    margin-top: 0px;
 }
+#projects h2 {
+  margin-top: 0px;
+}
+section {
+    padding: 0px 0;
+    overflow: hidden;
+}
+}
+@media (max-width: 768px) {
+  .about-content {
+      width: 90%;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .about-content {
+      position: static;
+      padding: 0px;
+      margin: 0px;
+      padding: 30px;
+      text-align: center;
+  }
+}
+@media (max-width: 1030px) {
+  .about-content {
+      border: 3px solid rgb(194, 6, 109);
+      border-radius: 0px;
+  }
+}
+
 
