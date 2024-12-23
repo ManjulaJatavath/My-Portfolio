@@ -73,6 +73,9 @@ border-radius: 5px;
 text-decoration: none;
 font-size: 14px;
 }
+.btn-outline-lg:hover {
+  color: #000; 
+}
 .btn-solid-lg {
 background-color: hsl(32, 100%, 50%);
 color: #fff;
@@ -81,21 +84,22 @@ border-radius: 5px;
 text-decoration: none;
 font-size: 14px;
 }
+.btn-solid-lg:hover {
+  color: #000;
+}
 .leftSection h1 p {
 white-space: nowrap; 
 }
 .leftSection h1 h5 p{
 font-family: "Poppins", sans-serif;
 }
-.color{
-color: #007bff;
-}
+
 .typed {
 color: hsl(32, 100%, 50%);
 font-size: 22px;
 }
 p{
-font-size: 25px;
+font-size: 20px;
 }
 .small-text {
 font-size: 20px;
@@ -881,10 +885,6 @@ margin-top: 96px;
   display: center;
   justify-content: center; 
   align-items: center;
-  margin: 20px;
-  height: 70vh; 
-  width:100%
-  
   }
   .internship-section1 .education-item h2 {
   /* Apply styles for the section title */
@@ -892,10 +892,8 @@ margin-top: 96px;
   font-size: 26px;
   color: #173b6c;
   text-align: center;
-  margin-bottom: 20px;
   position: relative;
-  margin-top: 120px;
-  margin-bottom: 40px;
+
   }
   @media (max-width: 767.98px) {
     .internship-section1 {
@@ -940,8 +938,6 @@ margin-top: 96px;
   display: center;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  height: 85vh;
   width: 100%;
 }
 .container, .container-fluid {
@@ -978,7 +974,6 @@ margin-top: 96px;
   
   .internship-section .timeline .timeline-text {
 
-    padding: 40px;
     background: #ffffff;
     position: relative;
     border-right: 5px solid #dddddd;
@@ -1042,6 +1037,7 @@ margin-top: 96px;
     text-decoration: none;
     font-size: 12px;
   }
+
     .firstSection {
         margin: 50px 0; /* Reduced margin */
         padding: 0 10px; /* Adjusted padding */

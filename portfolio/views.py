@@ -13,13 +13,10 @@ def about(request):
         'about_text': "Enthusiastic and dedicated Python Developer with a solid foundation in Python, Django, HTML5, CSS3, and MySQL. Eager to kickstart a career in software development, leveraging a passion for coding to contribute effectively to innovative projects. Committed to ongoing growth, embracing new challenges, and staying abreast of industry advancements through continuous learning.",
         'profile_info': {
             'name': 'Manjula Jatavath',
-            'birthday': '17 Aug 2001',
-            'phone': '6302389676',
+            'birthday': '17 Aug',
             'city': 'Hyderabad, Telangana',
-            'age': 23,
             'degree': 'BSC',
             'email': 'manjulajatavath554@gmail.com',
-            'freelance': True,
         }
     }
     return render(request, 'about.html', context)
