@@ -870,7 +870,7 @@ margin-top: 96px;
     5.  Acheivements
 --------------------------------------*/
 #experience1 {
-  padding: 10px 0;
+  /* padding: 10px 0; */
   margin:0 0 20px;
   
   }
@@ -963,7 +963,7 @@ margin-top: 96px;
   }
   
   .internship-section1 .timeline .timeline-text {
-  padding: 30px;
+  padding: 10px;
   background: #ffffff;
   position: relative;
   border-right: 5px solid #dddddd;
